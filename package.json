@@ -1,0 +1,26 @@
+{
+  "name": "steksywebapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marijkevanderveer/steksyWebApp.git"
+  },
+  "author": "maatje van der veer, kirsten de haas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marijkevanderveer/steksyWebApp/issues"
+  },
+  "homepage": "https://github.com/marijkevanderveer/steksyWebApp#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "pg": "^6.1.3",
+    "pug": "^2.0.0-beta11",
+    "sequelize": "^3.30.2"
+  }
+}
