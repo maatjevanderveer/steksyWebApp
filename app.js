@@ -42,6 +42,17 @@ app.get('/login', function (request, response){
 	response.render('login')
 })
 
+app.post('/login', function(request, response){
+	User.findOne({
+		where:{
+			email: request.body.email
+		}
+		.then(function(user){
+			console.log(user)
+		})
+	})
+})
+
 app.get('/signup', function (request, response){
 	response.render('signup')
 })
