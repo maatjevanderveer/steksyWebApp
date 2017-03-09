@@ -1,0 +1,18 @@
+// The main file (usually labelled main.scss) should be the only Sass file from the whole code base not to begin with an underscore. 
+// This file should not contain anything but @import and comments.
+
+// 1. Base stuff
+@import 'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
+
+// 2. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
+
+// 3. Components
+@import
+  'components/buttons';
+  'components/dropdown';
