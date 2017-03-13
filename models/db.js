@@ -27,6 +27,26 @@ const User = db.define('user', {
 	password: {
 		type: Sequelize.STRING,
 		allowNull:false,
+	},
+	name: {
+		type: Sequelize.STRING,
+		allowNull:false,
+	},
+	adress: {
+		type: Sequelize.STRING,
+		allowNull:false,
+	},
+	houseNumber: {
+		type: Sequelize.INTEGER,
+		allowNull:false,
+	},
+	zipcode: {
+		type: Sequelize.STRING,
+		allowNull:false,
+	},
+	city: {
+		type: Sequelize.STRING,
+		allowNull:false,
 	}
 
 });
@@ -53,7 +73,12 @@ db.sync({
 	return User.create ({
 		userName: "Admin",
 		email: "admin@mail.com",
-		password: "123"
+		password: "123",
+		name: "admin",
+		adress: "Prinsengracht",
+		houseNumber: "241",
+		zipcode: "1015DT",
+		city: "Amsterdam"
 	})
 	.then(function(user){
 		return user.createPlant ({

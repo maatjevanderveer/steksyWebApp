@@ -1,16 +1,15 @@
-extends ./layout.pug
+extends ./partials.pug
 block content
 	h1 Login Page
 	.container
-		.form(action='/login', method='post')
-			#form-title Log in here
-				#form-subtitle 
-					form.form-horizontal
-						.form-group
-							//- label.control-label.col-sm-2 Email:
-							.col-sm-10
-								input#email.form-control(type='email', placeholder='Enter your email here')
-								input#password.form-control(type='password', placeholder='enter your password')
-								button.btn.btn-default(type='submit') Submit
+		.login
+			form.register(action='/login', method='post')
+				
+				h2.form-title Please log in below
+				input.form-input(type='email', name='email' placeholder='What is your email?' required autofocus)
+				input.form-input(type='password', name='password', placeholder='What is your password?')
+				button.form-button(type='submit') Submit
+				
+
 
 
