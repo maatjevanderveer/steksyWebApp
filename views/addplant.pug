@@ -1,0 +1,13 @@
+extends ./partials.pug
+block content
+    h1 Offers
+    
+    form(action='/newpost' method='post')
+
+      label(for='title') Plantname:
+      input(type='text', placeholder='What kind of plant would you like to share?', name='newPlantName')
+      label(for='body') Description:
+      br
+      textarea.input(type='text', placeholder='write your description here...', name='newPost')
+      br
+      button(type='submit', name='action') Create your advertisement
