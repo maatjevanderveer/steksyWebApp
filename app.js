@@ -5,8 +5,6 @@ const app = express ()
 const session = require('express-session')
 const db = require(__dirname + '/models/db.js')
 
-
-
 //setting view folder and view engine
 app.set('views','./views');
 app.set('view engine', 'pug');
@@ -15,25 +13,39 @@ app.use(bodyParser.urlencoded({     // to ssupport URL-encoded bodies
 	extended: false
 })); 
 
-
-
-
-
-
-
+// MIDDLEWARE
+app.use(session({
+	secret: 'oh wow very secret much security',
+	resave: true,
+	saveUninitialized: false
+}));
 
 app.use(express.static('static'));
 
+// ROUTES
+// HOME
 app.get('/', function (request, response){
 	response.render('index')
 })
 
+// LOG IN
 app.get('/login', function (request, response){
-	response.render('login')
+	response.render('login', {
+		user: request.session.user
+	});
 })
 
 app.post('/login', function(request, response){
 	console.log("hallo ik doe het")
+	if(request.body.email.length === 0) {
+		response.redirect('/?message=' + encodeURIComponent("Please fill out your email address."));
+		return;
+	}
+
+	if(request.body.password.length === 0) {
+		response.redirect('/?message=' + encodeURIComponent("Please fill out your password."));
+		return;
+	}
 	db.User.findOne({
 		where:{
 			email: request.body.email
@@ -41,7 +53,8 @@ app.post('/login', function(request, response){
 	}).then(function(user){
 		console.log(user)
 		if (user !== null && request.body.password === user.password){
-			response.redirect('/offers')
+			request.session.user = user; // very important :)
+			response.redirect('/offers');
 		} else {
 			response.redirect('/?message'+ encodeURIComponent("Invalid email or password"));
 		}
@@ -50,13 +63,7 @@ app.post('/login', function(request, response){
 	});
 });
 
-
-
-
-
-
-
-
+// SIGN UP
 app.get('/signup', function (request, response){
 	response.render('signup')
 });
@@ -78,9 +85,9 @@ app.post('/signup', function(request, response){
 })
 
 
-app.get('/offers', function (request, response){
-	response.render('offers')
-})
+// app.get('/offers', function (request, response){
+// 	response.render('offers')
+// })
 
 // app.get('/addplant', function (request, response){
 // 	response.render('signup')
@@ -88,43 +95,40 @@ app.get('/offers', function (request, response){
 
 // ADD PLANT
 app.get('/addplant', function (request, response) {
-    user = request.session.user
-    if(user === undefined) {
-        response.redirect('/')
-    }
-    else {
-        response.render('addplant')
-    }
+	user = request.session.user
+	if(user === undefined) {
+		response.redirect('/')
+	}
+	else {
+		response.render('addplant')
+	}
 })
 
 app.post('/newplant', bodyParser.urlencoded({extended: true}), function(request, response) {
-    console.log(request.session)
-    db.Post.create({
-        title: request.body.newPlantName,
-        body: request.body.newBody,
-        userId: request.session.user.id
-
-    }).then( (newPlant) =>{
-        console.log(newPlant)
-        response.redirect('/offers')
-    })
+	console.log(request.session)
+	db.Plant.create({
+		plantName: request.body.newPlantName
+	}).then( (newPlant) =>{
+		console.log(newPlant)
+		response.redirect('/offers')
+	})
     // connect to database
     // 
 })
 
 // ALL PLANTS
 app.get('/offers', (request, response) => {
-    user = request.session.user
-    if(user === undefined) {
-        response.redirect('/')
-    }
-    else {
-        db.Post.findAll()
-        .then((allPlants) => {
-            console.log(allPlants[0].dataValues)
-            response.render('allPlants', {allPlants:allPlants})
-        })
-    }
+	user = request.session.user
+	if(user === undefined) {
+		response.redirect('/')
+	}
+	else {
+		db.Plant.findAll()
+		.then((allPlants) => {
+			console.log(allPlants[0].dataValues)
+			response.render('offers', {allPlants:allPlants})
+		})
+	}
 })
 
 
