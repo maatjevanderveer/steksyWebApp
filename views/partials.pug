@@ -10,18 +10,50 @@ html
     link(href='http://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext', rel='stylesheet', type='text/css')
     
   body
-    //- ul
-    //-   li
-    //-     a(href='/') Home
-    //-       li
-    //-         a(href='/login') Log In
-    //-       li
-    //-         a(href='/signup') Sign up 
-    //- wrapper
 
-    block content
+
+
+    //- NAVBAR
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href='#') Steksy
+        ul.nav.navbar-nav
+          li.active
+            a(href='/') Home
+          li
+            a(href='/offers') Aanbod
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href='/signup')
+              span.glyphicon.glyphicon-user
+              |  Sign Up
+          li
+            a(href='/login')
+              span.glyphicon.glyphicon-log-in
+              |  Login
+
+    wrapper
+      block content
+
+
+    //-FOOTER
+    footer
+      .container
+        p.text-muted Steksy
+          ul
+            li 
+              a(href='/') Home
+            li
+              a(href='/offers') Aanbod
+            li
+              a(href='/login') Login
+            li
+              a(href='/register') Register
+
 
     script(src="/js/jquery-3.1.1.js")
     script(src="/js/custom.js")
+
 
   
