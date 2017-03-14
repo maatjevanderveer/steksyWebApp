@@ -1,4 +1,12 @@
 extends ./partials.pug
 block content
-    h1 Index Page
 
+	div#box-wrapper
+		section.intro
+			.container
+				h1 Do you want your own stekje?
+				h2 Leen makkelijk en snel spullen van je buren
+				form.adress
+					input.form-input(type="text", name="homeadress" placeholder="type your adress")
+					button.form-button(type="submit" name="buurtbutton"
+					) bekijk je buurt

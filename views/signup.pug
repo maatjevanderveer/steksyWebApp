@@ -1,3 +1,42 @@
 extends ./partials.pug
 block content
-	h1 Signup Page
+	h1 Login Page
+	.container
+		.login
+			form(action='/signup', method='post')
+				
+				h2.form-title You can sign up below
+				input.form-input(type='text', name='userName' placeholder='Choose a username' required autofocus)
+				input.form-input(type='text', name='email' placeholder='What is your email?')
+				input.form-input(type='password', name='password', placeholder='Choose your password?')
+				br
+				h2.form-title#personaldetails Personal details
+				input.form-input(type='text', name='name' placeholder='What is your first and last name?' required autofocus)
+				input.form-input(type='text', name='adress' placeholder='In which street do you live?')
+				input.form-input(type='number', name='houseNumber' placeholder='What is your house number?')
+				input.form-input(type='text', name='zipcode' placeholder='What is your zipcode?')
+				input.form-input(type='text', name='city' placeholder='In which city do you live')
+				button.form-button(type='submit') Submit
+	//- .container
+	//- 	form(action='/signup', method='post')
+	//- 		//- input(type='text', name='firstName' placeholder='Enter your firstname here')
+	//- 		//- br
+	//- 		//- input(type='text', name='lastName' placeholder='Enter your lastname here')
+	//- 		//- br
+	//- 		input(type='text', name='userName' placeholder='Enter your username here')
+	//- 		br
+	//- 		input(type='text', name='email' placeholder='Enter your email here')
+	//- 		br
+	//- 		input#password.form-control(type='password', name='password', placeholder='enter your password')
+	//- 		//- br
+	//- 		//- input(type='text', name='adress' placeholder='Enter your Streetname here')
+	//- 		//- br
+	//- 		//- input(type='number', name='houseNumber' placeholder='number')
+	//- 		//- br
+	//- 		//- input(type='text', name='zipcode' placeholder='Enter your zipcode here')
+	//- 		//- br
+	//- 		//- input(type='text', name='country' placeholder='Enter your countryname here')
+	//- 		//- br
+
+
+			button.btn.btn-default(type='submit') Submit

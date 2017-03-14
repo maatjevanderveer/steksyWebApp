@@ -1,3 +1,15 @@
 extends ./partials.pug
 block content
 	h1 Login Page
+	.container
+		.login
+			form.register(action='/login', method='post')
+				
+				h2.form-title Please log in below
+				input.form-input(type='email', name='email' placeholder='What is your email?' required autofocus)
+				input.form-input(type='password', name='password', placeholder='What is your password?')
+				button.form-button(type='submit') Submit
+				
+
+
+
