@@ -8,11 +8,10 @@
   'base/helpers';
 
 // 2. Layout-related sections
-@import
-  'layout/header',
-  'layout/footer';
+
+@import 'layout/header';
+@import 'layout/footer';
 
 // 3. Components
-@import
-  'components/buttons',
-  'components/dropdown';
+@import 'components/buttons';
+@import  'components/dropdown';

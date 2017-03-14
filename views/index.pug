@@ -1,12 +1,32 @@
 extends ./partials.pug
 block content
 
-	div#box-wrapper
-		section.intro
-			.container
-				h1 Do you want your own stekje?
-				h2 Leen makkelijk en snel spullen van je buren
-				form.adress
-					input.form-input(type="text", name="homeadress" placeholder="type your adress")
-					button.form-button(type="submit" name="buurtbutton"
-					) bekijk je buurt
+	.container-fluid
+
+
+		div#image-firstpage
+			.navbar.navbar-top
+				.navbar-brand
+					a(href='/' class="navbar-brand") Steksie
+						img(alt='Brand', src='img/plant.png')
+
+					ul
+						li
+							a.btn-login(href='/login') Log In
+						li
+							a.btn-signup(href='/signup') Sign up 
+		
+			section
+				.container
+					h1 Do you want your own stekje?
+					h2 Leen makkelijk en snel spullen van je buren
+					form.adress
+						input.form-input(type="text", name="homeadress" placeholder="type your adress")
+						button.form-button(type="submit" name="buurtbutton"
+						) bekijk je buurt
+				
+
+
+
+	
+
