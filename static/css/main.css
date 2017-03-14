@@ -139,6 +139,9 @@ button {
   background-image: url("./img/stekje.jpeg") !important;
   height: 1000px; }
 
+.img-responsive {
+  max-width: 25%; }
+
 html {
   position: relative;
   min-height: 100%; }

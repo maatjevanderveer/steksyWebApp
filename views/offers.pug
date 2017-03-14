@@ -1,16 +1,33 @@
 extends ./partials.pug
 block content
 
-    h1 Offers
+  .container
+    br
+    br
+    br
+    br
+    p Hi there!
+    p here you see the current cuttings offered:
 
       each key in allPlants
-        p 
-          strong ID: 
-          | #{key.userId}:
-        p 
-          strong plantname: 
-          | #{key.plantName}
-        br
+        .row
+          .col-sm-6
+            .card
+              .card-block
+                img.card-img-top.img-responsive(src='/img/pancake.jpg', alt='Card image cap')
+                .card-block
+                  h4.card-title #{key.plantName}
+                  p.card-text
+                    | offered by #{key.userId}
+                  |  
+                  a.btn.btn-primary(href='#') Go somewhere
+        //- p 
+        //-   strong ID: 
+        //-   | #{key.userId}
+        //- p 
+        //-   strong plantname: 
+        //-   | #{key.plantName}
+        //- br
 
 
 
