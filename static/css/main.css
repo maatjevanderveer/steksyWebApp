@@ -1,0 +1,142 @@
+p {
+  color: green; }
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto; }
+
+.adress .form-input {
+  padding: 18px 45px 18px 25px;
+  display: inline-block;
+  font-size: 16px;
+  width: 335px;
+  float: none;
+  border-style: none;
+  border: 2px solid #fff;
+  background: #fff; }
+
+.adress {
+  margin-left: 275px;
+  margin-top: 50px; }
+
+.adress .form-button {
+  display: inline-block;
+  background-color: #ffa85e;
+  border: 3px solid #ffa85e;
+  padding: 14px 45px 16px 45px;
+  border-radius: 6px;
+  color: #fff;
+  margin-left: 11px;
+  margin-right: 20px;
+  font-size: 20px;
+  font-weight: normal;
+  width: auto; }
+
+.container h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 64px;
+  width: 1000px;
+  margin-top: 300px;
+  padding: 10px; }
+
+.container h2 {
+  color: #fff;
+  text-align: center; }
+
+body {
+  background-image: url("../img/stekjegroen.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 640px;
+  font: 13px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #404040; }
+
+.login form {
+  position: relative;
+  background: #fff;
+  max-width: 360px;
+  margin: 50px auto 100px;
+  padding: 33px 25px 29px;
+  text-align: center;
+  border-bottom: 1px solid #c4c4c4;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); }
+
+.form-title {
+  margin: -25px -25px 25px;
+  padding: 15px 25px;
+  line-height: 35px;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.75);
+  background: #f7f7f7; }
+  .form-title:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: #c4e17f;
+    border-radius: 5px 5px 0 0;
+    background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: linear-gradient(to inverse-side(left), #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4); }
+
+input {
+  font-family: inherit;
+  color: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.login input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 25px;
+  padding: 0 15px 2px;
+  font-size: 17px;
+  background: white;
+  border: 2px solid #ebebeb;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 -2px #ebebeb;
+  box-shadow: inset 0 -2px #ebebeb; }
+  .login input:focus {
+    border-color: #62c2e4;
+    outline: none;
+    -webkit-box-shadow: inset 0 -2px #62c2e4;
+    box-shadow: inset 0 -2px #62c2e4; }
+
+button {
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  height: 54px;
+  padding: 0;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #f0776c;
+  border: 0;
+  border-bottom: 2px solid #d76b60;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #d76b60;
+  box-shadow: inset 0 -2px #d76b60; }
+  button:active {
+    top: 1px;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
+.indexpage {
+  background-image: url("./img/stekje.jpeg") !important;
+  height: 1000px; }
+
+/*# sourceMappingURL=main.css.map */
