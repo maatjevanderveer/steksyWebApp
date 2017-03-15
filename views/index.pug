@@ -1,29 +1,104 @@
 extends ./partials.pug
 block content
+	.navbar.navbar-default.transparent
+		.container
+		.navbar-header
+			button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+				span.sr-only Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			|
+			a.navbar-brand(href='/') Steksie
+				img(src='img/plant.png', alt='Logo')
+		#bs-example-navbar-collapse-1.collapse.navbar-collapse
+			ul.nav.navbar-nav.navbar-right
+				li.active
+					a(href='/') Home
+				li
+					a(href='/offers') Aanbod
+				li
+					a(href='/addplant') Voeg stekje toe
+				li
+					a(href='/login') Login
+				li
+					a(href='/signup') Sign up
 
-	.container-fluid
+
+	header#home.home
+		.overlay-fluid-block
+			.container.text-center
+				.row
+					.home-wrapper
+						.col-md-10.col-md-offset-1
+							.home-content
+								h1#homeHeading Wil jij je eigen stekje?
+								hr
+								h2 Leen makkelijk en snel spullen van je buren
+
+								.row
+									.col-md-6.col-md-offset-3.col-sm-12.col-xs-12
+										.home-contact
+
+								form.adress
+										input.form-input(type="text", name="homeadress" placeholder="type your adress")
+										button.form-button(type="submit" name="buurtbutton"
+										) bekijk je buurt
+
+	section
 
 
-		div#image-firstpage
-			.navbar.navbar-top
-				.navbar-brand
-					a(href='/' class="navbar-brand") Steksie
-						img(alt='Brand', src='img/plant.png')
+	//- footer.footer#footer.footer-menu.sections.footer-menu
+	//- 	.container
+	//- 		.row
+	//- 			.footer-menu-wrapper
+	//- 				.col-md-6.col-sm-6.col-xs-12
+	//- 					.menu-item
+	//- 						.navbar-brand Steksie
+	//- 							img(src='img/plant.png', alt='Logo')
+	//- 						p.text-muted 
+	//- 							ul
+	//- 								li
+	//- 									a(href='/') Home
+	//- 								li
+	//- 									a(href='/offers') Aanbod
+	//- 								li
+	//- 									a(href='/login') Login
+	//- 								li
+	//- 									a(href='/login') Register
+	//- 	//- p.text-muted Steksy
+		//-   ul
+		//- 	li 
+		//- 	  a(href='/') Home
+		//- 	li
+		//- 	  a(href='/offers') Aanbod
+		//- 	li
+		//- 	  a(href='/login') Login
+		//- 	li
+		//- 	  a(href='/register') Register
+	//- .container-fluid
 
-					ul
-						li
-							a.btn-login(href='/login') Log In
-						li
-							a.btn-signup(href='/signup') Sign up 
+
+	//- 	div#image-firstpage
+	//- 		.navbar.navbar-top
+	//- 			.navbar-brand
+	//- 				a(href='/' class="navbar-brand") Steksie
+	//- 					img(alt='Brand', src='img/plant.png')
+
+	//- 				ul
+	//- 					li
+	//- 						a.btn-login(href='/login') Log In
+	//- 					li
+	//- 						a.btn-signup(href='/signup') Sign up 
 		
-			section
-				.container
-					h1 Do you want your own stekje?
-					h2 Leen makkelijk en snel spullen van je buren
-					form.adress
-						input.form-input(type="text", name="homeadress" placeholder="type your adress")
-						button.form-button(type="submit" name="buurtbutton"
-						) bekijk je buurt
+			//- section
+			//- 	.container
+			//- 		h1 Do you want your own stekje?
+			//- 		h2 Leen makkelijk en snel spullen van je buren
+			//- 		form.adress
+			//- 			input.form-input(type="text", name="homeadress" placeholder="type your adress")
+			//- 			button.form-button(type="submit" name="buurtbutton"
+			//- 			) bekijk je buurt
 				
 
 
