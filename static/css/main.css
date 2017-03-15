@@ -1,3 +1,4 @@
+
 html,
 body {
   font-size: 15px;
@@ -61,6 +62,7 @@ ul {
 .home {
   background: url(../img/stekjegroen.jpg) no-repeat center center;
   color: #000;
+
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -217,7 +219,9 @@ button {
   cursor: pointer; }
   button:active {
     top: 1px;
+
     outline: none; }
+
 
 .img-responsive {
   max-width: 25%; }
