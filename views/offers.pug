@@ -1,34 +1,97 @@
 extends ./partials.pug
 block content
+	.navbar.navbar-default.transparent
+		.container
+		.navbar-header
+			button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+				span.sr-only Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			|
+			a.navbar-brand(href='/') Steksie
+				img(src='img/plant.png', alt='Logo')
+		#bs-example-navbar-collapse-1.collapse.navbar-collapse
+			ul.nav.navbar-nav.navbar-right
+				li.active
+					a(href='/') Home
+				li
+					a(href='/offers') Aanbod
+				li
+					a(href='/addplant') Voeg stekje toe
+				li
+					a(href='/login') Login
+				li
+					a(href='/signup') Sign up
+			 
+	section#business.portfolio.sections
+		.container
+				.head_title.text-center
+					h1 Hi There!
+					p Here you see the current cuttings offered in your neigbourhood:
+					section#business.portfolio.sections
+	.container
 
-  .container
-    br
-    br
-    br
-    br
-    p Hi there!
-    p here you see the current cuttings offered:
+		.row
+			.portfolio-wrapper.text-center
+				.col-md-3.col-sm-6.col-xs-12
+					.community-edition
+						i.fa.fa-book
+						.separator
+						h4 Community Edition
+						p
+							| Visually explore your data through a free-form drag-and-drop canvas, a broad range of modern data visualizations, and an easy-to-use report authoring experience.
+				.col-md-3.col-sm-6.col-xs-12
+					.community-edition
+						i.fa.fa-bug
+						.separator
+						h4 Community Edition
+						p
+							| Visually explore your data through a free-form drag-and-drop canvas, a broad range of modern data visualizations, and an easy-to-use report authoring experience.
+				.col-md-3.col-sm-6.col-xs-12
+					.community-edition
+						i.fa.fa-gears
+						.separator
+						h4 Community Edition
+						p
+							| Visually explore your data through a free-form drag-and-drop canvas, a broad range of modern data visualizations, and an easy-to-use report authoring experience.
+				.col-md-3.col-sm-6.col-xs-12
+					.community-edition
+						i.fa.fa-external-link
+						.separator
+						h4 Community Edition
+						p
+							| Visually explore your data through a free-form drag-and-drop canvas, a broad range of modern data visualizations, and an easy-to-use report authoring experience.
+				
 
-      each key in allPlants
-        .row
-          .col-sm-6
-            .card
-              .card-block
-                img.card-img-top.img-responsive(src='/img/pancake.jpg', alt='Card image cap')
-                .card-block
-                  h4.card-title #{key.plantName}
-                  p.card-text
-                    | offered by #{key.userId}
-                  |  
-                  a.btn.btn-primary(href='#') Go somewhere
-        //- p 
-        //-   strong ID: 
-        //-   | #{key.userId}
-        //- p 
-        //-   strong plantname: 
-        //-   | #{key.plantName}
-        //- br
+			
+				.row
+					.portfolio-wrapper.text-center
+						.col-sm-6.colmd-3.col-xs-12
+							.community-edition
+								i.fa.fa-book
+									.seperator
 
+							.card(style='width: 20rem;')
+							img.card-img-top(src='...', alt='Card image cap')
+							.card-block
+								h4.card-title Card title
+								p.card-text
+									| Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+								|
+								a.btn.btn-primary(href='#') Go somewhere
+			
+									
+							.card
+								img.card-img-top.img-responsive(src='/img/pancake.jpg', alt='Card image cap')
+								.card-block
+								each key in allPlants
+											h4.card-title #{key.plantName}
+											p.card-text
+												| offered by #{key.userId}
+											|
+											a.btn.btn-primary(href='#') Go somewhere
+				
 
 
 

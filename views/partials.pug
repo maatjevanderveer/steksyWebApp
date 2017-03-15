@@ -9,51 +9,39 @@ html
     link(rel='stylesheet', type='text/css', href='../css/main.css')
     link(href='http://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext', rel='stylesheet', type='text/css')
     
-  body
+  body#page-top
 
 
 
-    //- NAVBAR
-    nav.navbar.navbar-default.navbar-fixed-top
-      .container-fluid
-        .navbar-header
-          a.navbar-brand(href='#') Steksy
-        ul.nav.navbar-nav
-          li.active
-            a(href='/') Home
-          li
-            a(href='/offers') Aanbod
-        ul.nav.navbar-nav.navbar-right
-          li
-            a(href='/signup')
-              span.glyphicon.glyphicon-user
-              |  Sign Up
-          li
-            a(href='/login')
-              span.glyphicon.glyphicon-log-in
-              |  Login
+  
 
-    wrapper
+    
       block content
 
+              
+      footer.footer#footer.footer-menu.sections.footer-menu
+        .container
+          .row
+            .footer-menu-wrapper
+              .col-md-6.col-sm-6.col-xs-12
+                .menu-item
+                  .navbar-brand Steksie
+                    img(src='img/plant.png', alt='Logo')
+                  p.text-muted 
+                    ul
+                      li
+                        a(href='/') Home
+                      li
+                        a(href='/offers') Aanbod
+                      li
+                        a(href='/login') Login
+                      li
+                        a(href='/addplant') Voeg stekje toe
 
-    //-FOOTER
-    footer
-      .container
-        p.text-muted Steksy
-          ul
-            li 
-              a(href='/') Home
-            li
-              a(href='/offers') Aanbod
-            li
-              a(href='/login') Login
-            li
-              a(href='/register') Register
 
 
-    script(src="/js/jquery-3.1.1.js")
-    script(src="/js/custom.js")
+      //- script(src="/js/jquery-3.1.1.js")
+      //- script(src="/js/custom.js")
 
 
   

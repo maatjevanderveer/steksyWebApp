@@ -32,71 +32,315 @@
 //   }
 // }
 
-@mixin box-shadow($shadows...) {
-  -webkit-box-shadow: $shadows;
-          box-shadow: $shadows;
+
+html,
+body {
+    font-size: 15px;
+    color: #565656;
+    width: 100%;
+    padding: 0;
+
+    margin-left: 0;
+    margin-right: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
+
+ul{
+  list-style-type: none;
+}
+/*For Menu Style*/
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius:0;
+    padding-top:20px;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    color: #82ca9c;
+    background-color:transparent;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #000;
+    font-size:14px;
+    font-weight:600;
+    text-transform:uppercase;
+}
+.navbar-default .navbar-nav li a :hover{
+    color: #82ca9c;
+}
+.navbar-default .collapse .login a{
+    color: #82ca9c;
+    border: 1px solid #82ca9c;
+    border-radius: 20px;
+    padding: 4px 30px;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 30px;
+    display:inline-block;
+    overflow:hidden;
+}
+.navbar-default .collapse .login:hover a{
+    background-color: rgba(0, 173, 62, 0.75);
+    color:#fff;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #82ca9c;
+    background-color: transparent;
+}
+.navbar-brand{
+    margin-top:-5px; 
+
+    
+    img{
+      display: inline-block;
+      width: 5%;
+      
+    }
+}
+
+
+/*For Home Section*/
+.home{
+    background:url(../img/stekjegroen.jpg) no-repeat center center;
+    color:#000;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    -ms-background-size:cover;
+}
+.home-wrapper{
+    padding:300px 0px;
+    overflow:hidden;
+}
+.home-content {
+h1{
+    font-size:48px;
+    font-weight:700;
+    margin-bottom: 30px;
+    color: #fff;
+}
+ h2{
+    margin-bottom: 30px;
+    color: #fff;
+}
+}
+
+.home-content .home-contact{
+    margin-top: 90px;
+}
+
+.home-contact .input-group{display: block;}
+.home-content .input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 65%;
+    margin-bottom: 0;
+    height: 60px;
+
+}
+.home-content .home-contact input[type="text"]{
+    color:#82ca9c;
+}
+.home-content .home-contact input[type="submit"]{
+    display:inline-block;
+    width:35%;
+    background:#82ca9c;
+    color:#fff;
+    border: 0px;
+}
+.home-content .home-contact input[type="submit"]:hover{
+    background-color: rgba(0, 173, 62, 0.75);
+}
+.home-contact p{
+    margin-top: 20px;
+    color:#000;
+    font-size:15px;
+}
+.form-control {
+    border: 1px solid #DEDEDE;
+    height:45px;
+    border-radius: 0px;
+    margin-right: -3px;
+}
+.head_title {
+    margin-bottom: 40px;
+}
+.head_title p {
+    max-width: 55%;
+    margin: 10px auto;
+    padding-bottom: 20px;
+}
+
+
+
+
+// html,
+// body {
+//   height: 100%;
+//   width: 100%;
+// }
+
+// hr {
+
+//   border-width: 3px;
+//   max-width: 50px;
+// }
+
+// hr.light {
+//   border-color: white;
+// }
+
+// section {
+//   padding: 100px 0;
+// }
+
+
+// //  header{
+// //   min-height: auto;
+// //   -webkit-background-size: cover;
+// //   -moz-background-size: cover;
+// //   background-size: cover;
+// //   -o-background-size: cover;
+// //   background-position: center;
+// //   background-image: url(../img/stekjegroen.jpg);
+// //   // color: #fff;
+// //   // position: relative;
+// //   // width: 100%
+// //   // text-align: center;
+// //   // color: white;
+// // }
+
+// // header {
+// //   position: relative;
+// //   width: 100%;
+// //   min-height: auto;
+// //   background-image: ('../img/stekjegroen.jpg');
+// //   background-position: center;
+// //   text-align: center;
+// //   color: white;
+// // }
+// //     .header-content {
+//         position: relative;
+//         text-align: center;
+//         padding: 100px 15px 100px;
+//         width: 100%;
+//       }
+// //         .header-content-inner {
+// //             h1 {
+// //                 font-weight: 700;
+// //                 text-transform: uppercase;
+// //                 margin-top: 0;
+// //                 margin-bottom: 0;
+// //                 font-size: 30px;
+// //             }
+// //             hr {
+// //                 margin: 30px auto;
+// //             }
+// //             p {
+// //                 font-weight: 300;
+// //                 color: fade(white, 70%);
+// //                 font-size: 16px;
+// //                 margin-bottom: 50px;
+// //             }
+// //         }
+// //     }
+// //     @media (min-width: 768px) {
+// //         min-height: 100%;
+// //         .header-content {
+// //             position: absolute;
+// //             top: 50%;
+// //             -webkit-transform: translateY(-50%);
+// //             -ms-transform: translateY(-50%);
+// //             transform: translateY(-50%);
+// //             padding: 0 50px;
+// //             .header-content-inner {
+// //                 max-width: 1000px;
+// //                 margin-left: auto;
+// //                 margin-right: auto;
+// //                 h1 {
+// //                     font-size: 50px;
+// //                 }
+// //                 p {
+// //                     font-size: 18px;
+// //                     max-width: 80%;
+// //                     margin-left: auto;
+// //                     margin-right: auto;
+// //                 }
+// //             }
+// //         }
+// //     }
+// // }
+
+// @mixin box-shadow($shadows...) {
+//   -webkit-box-shadow: $shadows;
+//   box-shadow: $shadows;
+// }
 
 @mixin linear-gradient($gradientLine, $colorStops...) {
   background-image: -webkit-linear-gradient($gradientLine, $colorStops);
   background-image:    -moz-linear-gradient($gradientLine, $colorStops);
   background-image:      -o-linear-gradient($gradientLine, $colorStops);
   @if length($gradientLine) == 2 {
-  background-image:         linear-gradient(to #{inverse-side(nth($gradientLine, 1))} #{inverse-side(nth($gradientLine, 2))}, $colorStops);
-  } @else {
-  background-image:         linear-gradient(to #{inverse-side($gradientLine)}, $colorStops);
+    background-image:         linear-gradient(to #{inverse-side(nth($gradientLine, 1))} #{inverse-side(nth($gradientLine, 2))}, $colorStops);
+    } @else {
+      background-image:         linear-gradient(to #{inverse-side($gradientLine)}, $colorStops);
+    }
   }
-}
 
-@mixin box-sizing($val) {
-  -webkit-box-sizing: $val;
-     -moz-box-sizing: $val;
-          box-sizing: $val;
-}
+//   @mixin box-sizing($val) {
+//     -webkit-box-sizing: $val;
+//     -moz-box-sizing: $val;
+//     box-sizing: $val;
+//   }
 
 
-p{
-	color: green;
-}
+//   p{
+//    color: green;
+//  }
 
-.login-page {
-	width: 360px;
-	padding: 8% 0 0;
-	margin: auto;
-}
-.container-fluid{
-  border: solid black 1px;
-  height:100vh;
-  background-image: url("../img/stekje.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment:fixed;
-  background-position: center;
+
+
+// .login-page {
+// 	width: 360px;
+// 	padding: 8% 0 0;
+// 	margin: auto;
+// }
+// .container-fluid{
+//   border: solid black 1px;
+//   height:85vh;
+//   // background-image: url("../img/stekje.jpeg");
+//   // background-repeat: no-repeat;
+//   // background-size: cover;
+//   // background-attachment:fixed;
+//   // background-position: center;
   
-
-}
-body{
-  // background-image: url("../img/stekjegroen.jpg");
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-attachment:fixed;
-  // background-position: center;
-  // min-height: 640px;
-  
-  // background: #76b852;
-  // backgroud
-
-  font: 13px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #404040;
-  // min-height: 100%;
-  // max-width: 100%;
-
-}
-// #image-firstpage{
 
 // }
+// body{
+//   // background-image: url("../img/stekjegroen.jpg");
+//   // background-repeat: no-repeat;
+//   // background-size: cover;
+//   // background-attachment:fixed;
+//   // background-position: center;
+//   // min-height: 640px;
+  
+//   // background: #76b852;
+//   // backgroud
 
- .adress .form-input{
+//   font: 13px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+//   color: #404040;
+//   // min-height: 100%;
+//   // max-width: 100%;
+
+// }
+// // #image-firstpage{
+
+// // }
+
+.adress .form-input{
 	padding: 18px 45px 18px 25px;
 	display: inline-block;
 	font-size: 16px;
@@ -107,41 +351,41 @@ body{
 	background: #fff;
 
 }
- .adress{
-	margin-left: 275px;
+.adress{
+	
 	margin-top: 50px;
 }
 .adress .form-button{
 	display: inline-block;
-    background-color: #ffa85e;
-    border: 3px solid #ffa85e;
-    padding: 14px 45px 16px 45px;
-    border-radius: 6px;
-    color: #fff;
-    margin-left: 11px;
-    margin-right: 20px;
-    font-size: 20px;
+  background-color: #ffa85e;
+  border: 3px solid #ffa85e;
+  padding: 14px 45px 16px 45px;
+  border-radius: 6px;
+  color: #fff;
+  margin-left: 11px;
+  margin-right: 20px;
+  font-size: 20px;
     // font-family: 'sofia_regular';
     font-weight: normal;
     width: auto;
-}
-.container h1{
-	text-align: center;
-	color: #fff;
-	font-size: 64px;
-	width: 1000px;
-	margin-top: 300px;
-	// color: #333;
-	// border: 5px solid #333;
-	// border-radius: 10px;
-	padding: 10px;
+  }
+//   .container h1{
+//    text-align: center;
+//    color: #fff;
+//    font-size: 64px;
+//    width: 1000px;
+//    margin-top: 300px;
+// 	// color: #333;
+// 	// border: 5px solid #333;
+// 	// border-radius: 10px;
+// 	padding: 10px;
 	
-}
+// }
 
-.container h2{
-	color: #fff;
-	text-align: center;
-}
+// .container h2{
+// 	color: #fff;
+// 	text-align: center;
+// }
 
 
 
@@ -153,11 +397,11 @@ body{
 	padding: 33px 25px 29px;
 	text-align: center;
 	border-bottom: 1px solid #c4c4c4;
-	border-radius: 5px;
-	 @include box-shadow(0 1px 5px rgba(black, .25));
+	border-radius: 5px
+  }  // @include box-shadow(0 1px 5px rgba(black, .25));
 
 
-}
+// }
 
 .form-title{
   margin: -25px -25px 25px;
@@ -169,8 +413,9 @@ body{
   text-align: center;
   text-shadow: 0 1px rgba(white, .75);
   background: #f7f7f7;
+  
 
-   &:before {
+  &:before {
     content: '';
     position: absolute;
     top: 0;
@@ -180,21 +425,21 @@ body{
     background: #c4e17f;
     border-radius: 5px 5px 0 0;
     @include linear-gradient(left,
-                             #c4e17f, #c4e17f 12.5%,
-                             #f7fdca 12.5%, #f7fdca 25%,
-                             #fecf71 25%, #fecf71 37.5%,
-                             #f0776c 37.5%, #f0776c 50%,
-                             #db9dbe 50%, #db9dbe 62.5%,
-                             #c49cde 62.5%, #c49cde 75%,
-                             #669ae1 75%, #669ae1 87.5%,
-                             #62c2e4 87.5%, #62c2e4);
+     #c4e17f, #c4e17f 12.5%,
+     #f7fdca 12.5%, #f7fdca 25%,
+     #fecf71 25%, #fecf71 37.5%,
+     #f0776c 37.5%, #f0776c 50%,
+     #db9dbe 50%, #db9dbe 62.5%,
+     #c49cde 62.5%, #c49cde 75%,
+     #669ae1 75%, #669ae1 87.5%,
+     #62c2e4 87.5%, #62c2e4);
   }
 }
 
 input {
   font-family: inherit;
   color: inherit;
-  @include box-sizing(border-box);
+  // @include box-sizing(border-box);
 }
 
 .login input {
@@ -206,17 +451,17 @@ input {
   background: white;
   border: 2px solid #ebebeb;
   border-radius: 4px;
-  @include box-shadow(inset 0 -2px #ebebeb);
+  // @include box-shadow(inset 0 -2px #ebebeb);
 
   &:focus {
     border-color: #62c2e4;
     outline: none;
-    @include box-shadow(inset 0 -2px #62c2e4);
+    // @include box-shadow(inset 0 -2px #62c2e4);
   }
 
-  }
+}
 
-  button {
+button {
   position: relative;
   vertical-align: top;
   width: 100%;
@@ -231,46 +476,46 @@ input {
   border-bottom: 2px solid #d76b60;
   border-radius: 5px;
   cursor: pointer;
-  @include box-shadow(inset 0 -2px #d76b60);
+  // @include box-shadow(inset 0 -2px #d76b60);
 
   &:active {
     top: 1px;
     outline: none;
-    @include box-shadow(none);
+    // @include box-shadow(none);
   }
 }
 
-.indexpage{
-	background-image: url("./img/stekje.jpeg") !important;
-	height: 1000px;
-}
+// .indexpage{
+// 	background-image: url("./img/stekje.jpeg") !important;
+// 	height: 1000px;
+// }
 
-.navbar{
-	position: fixed;
-	width: 100%;
-	height: 107px;
-}
+// .navbar{
+// 	position: fixed;
+// 	width: 100%;
+// 	height: 107px;
+// }
 
-.navbar .navbar-brand a{
+// .navbar .navbar-brand a{
 
-	color: white;
+// 	color: white;
 
-}
+// }
 
-.navbar .navbar-brand img{
-	width:10%;
-	display: inline-block;
-}
+// .navbar .navbar-brand img{
+// 	width:10%;
+// 	display: inline-block;
+// }
 
-.navbar .navbar-brand ul{
-	display:inline-block;
-}
+// .navbar .navbar-brand ul{
+// 	display:inline-block;
+// }
 
-.navbar .navbar-brand li{
-	display:inline-block;
-	padding: 20px;
+// .navbar .navbar-brand li{
+// 	display:inline-block;
+// 	padding: 20px;
 
-}
+// }
 
 
 
