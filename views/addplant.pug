@@ -1,13 +1,21 @@
 extends ./partials.pug
 block content
-    h1 Offers
     
-    form(action='/newpost' method='post')
-
-      label(for='title') Plantname:
-      input(type='text', placeholder='What kind of plant would you like to share?', name='newPlantName')
-      label(for='body') Description:
-      br
-      textarea.input(type='text', placeholder='write your description here...', name='newPost')
-      br
-      button(type='submit', name='action') Create your advertisement
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    
+    .section
+        .container
+            form(action='/newpost' method='post')
+              h2.form-title Voeg je stekje toe
+              label(for='title') Soort:
+              input(type='text', placeholder='Wat voor stekje wil je delen/verkopen', name='newPlantName')
+              br
+              label(for='body') Omschrijving:
+              textarea.input(type='text', placeholder='Schrijf een korte omschrijving hier', name='newPost')
+              button.form-button(type='submit') Create your advertisement
