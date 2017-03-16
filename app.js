@@ -107,7 +107,8 @@ app.get('/addplant', function (request, response) {
 app.post('/newplant', bodyParser.urlencoded({extended: true}), function(request, response) {
 	console.log(request.session)
 	db.Plant.create({
-		plantName: request.body.newPlantName
+		plantName: request.body.newPlantName,
+		description: request.body.newDescription
 	}).then( (newPlant) =>{
 		console.log(newPlant)
 		response.redirect('/offers')
