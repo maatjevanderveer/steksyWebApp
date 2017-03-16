@@ -142,6 +142,22 @@ app.get('/offers', (request, response) => {
 	}
 })
 
+// VIEW A SPECIFIC PLANT
+app.get('/grabplant', (request, response) => {
+    console.log(request.query.id)
+    user = request.session.user;
+    db.Plant.findOne({
+        where: {
+            id: request.query.id
+        },
+    })
+    .then((onePlant) => {
+        console.log('this logges data of specific post')
+        console.log(onePlant[0])
+        response.render('grabplant', {onePlant:onePlant})
+    })
+})
+
 
 app.listen(3000, function(){
 	console.log("The server has started")
