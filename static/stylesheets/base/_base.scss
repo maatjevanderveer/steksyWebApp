@@ -174,7 +174,14 @@ h1{
     padding-bottom: 20px;
 }
 
+.community-edition p{
+  text-align: left;
+}
 
+//OFFERSE
+.container .offers{
+  background:red;
+}
 
 
 // html,
@@ -289,6 +296,73 @@ h1{
       background-image:         linear-gradient(to #{inverse-side($gradientLine)}, $colorStops);
     }
   }
+
+  /*For portfolio Section*/
+.portfolio{
+    background: url(../images/bg.png) no-repeat top center fixed;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -ms-background-size:cover;
+    width: 100%;
+    overflow: hidden;
+}
+
+.community-edition{
+    background:#fff;
+    padding:40px 15px;
+    border:1px solid #ececec;
+    box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
+    -webkit-box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
+    -moz-box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
+    -o-box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
+    -ms-box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
+    transition:.3s ease-in-out;
+    -moz-transition:.3s ease-in-out;
+    -webkit-transition:.3s ease-in-out;
+    margin-bottom: 50px;
+}
+.community-edition:hover{
+    background:#82ca9c;
+    color:#fff;
+}
+.community-edition:hover i {
+    color:#fff;
+}
+.community-edition:hover h4 {
+    color:#fff;
+}
+.community-edition:hover p {
+    color:#fff;
+}
+
+.community-edition i{
+    font-size:60px;
+    color:#82ca9c;
+    margin-bottom: 20px;
+}
+.community-edition h4{
+    font-size:16px;
+    color:#000;
+    text-transform:uppercase;
+    font-weight:600;
+    letter-spacing:1px;
+    margin-top:15px;
+}
+.community-edition  p {
+   
+    color:#777777;
+}
+.community-edition .offeredby p{
+    font-size:12px;
+    color:#777777;
+}
+
+
+
+.portfolio-wrapper2{
+    margin-top:25px;
+}
 
 //   @mixin box-sizing($val) {
 //     -webkit-box-sizing: $val;
