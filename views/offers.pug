@@ -27,7 +27,8 @@ block content
 	section#business.portfolio.sections
 		.container
 				.head_title.text-center
-					h1 Welkom!
+					h1 Hallo
+						span(style='color:#82ca9c;font-weight:bold')  #{name}!
 					h4 Bekijk stekjes bij jou in de buurt:
 					section#business.portfolio.sections
 
@@ -47,234 +48,15 @@ block content
 						img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
 						each key in allPlants
 							p.offeredby
-								| offered by #{key.userId}
+								//- | offered by #{key.user.userName}
 						p
 								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-								
-						button.form-button(href='#') Ja die wil ik
-				.col-md-3.col-sm-6.col-xs-12
-					.community-edition
-						each key in allPlants
-								h4 #{key.plantName}
-						.thumbnail
-						a(href='#')
-						img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-						each key in allPlants
-							p.offeredby
-								| offered by #{key.userId}
-						p
-								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-								
-						button.form-button(href='#') Ja die wil ik
-				.col-md-3.col-sm-6.col-xs-12
-					.community-edition
-						each key in allPlants
-								h4 #{key.plantName}
-						.thumbnail
-						a(href='#')
-						img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-						each key in allPlants
-							p.offeredby
-								| offered by #{key.userId}
-						p
-								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-								
-						button.form-button(href='#') Ja die wil ik
 
-				.col-md-3.col-sm-6.col-xs-12
-					.community-edition
-						each key in allPlants
-								h4 #{key.plantName}
-						.thumbnail
-						a(href='#')
-						img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-						each key in allPlants
-							p.offeredby
-								| offered by #{key.userId}
-						p
-								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-								
-						button.form-button(href='#') Ja die wil ik
+						input(class="button form-button" type='button', onclick="location.href='http://google.com';", value='Go to Google')
 
-		.row
-			.portfolio-wrapper.text-center
-				.col-md-3.col-sm-6.col-xs-12
-					.community-edition
-						each key in allPlants
-								h4 #{key.plantName}
-						.thumbnail
-						a(href='#')
-						img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-						each key in allPlants
-							p.offeredby
-								| offered by #{key.userId}
-						p
-								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
 								
-						button.form-button(href='#') Ja die wil ik
-				.col-md-3.col-sm-6.col-xs-12
-					.community-edition
-						each key in allPlants
-								h4 #{key.plantName}
-						.thumbnail
-						a(href='#')
-						img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-						each key in allPlants
-							p.offeredby
-								| offered by #{key.userId}
-						p
-								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-								
-						button.form-button(href='#') Ja die wil ik
-				.col-md-3.col-sm-6.col-xs-12
-					.community-edition
-						each key in allPlants
-								h4 #{key.plantName}
-						.thumbnail
-						a(href='#')
-						img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-						each key in allPlants
-							p.offeredby
-								| offered by #{key.userId}
-						p
-								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-								
-						button.form-button(href='#') Ja die wil ik
-
-				.col-md-3.col-sm-6.col-xs-12
-					.community-edition
-						each key in allPlants
-								h4 #{key.plantName}
-						.thumbnail
-						a(href='#')
-						img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-						each key in allPlants
-							p.offeredby
-								| offered by #{key.userId}
-						p
-								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-								
-						button.form-button(href='#') Ja die wil ik
-
-		.row
-			.portfolio-wrapper.text-center
-				.col-md-3.col-sm-6.col-xs-12
-					.community-edition
-						each key in allPlants
-								h4 #{key.plantName}
-						.thumbnail
-						a(href='#')
-						img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-						each key in allPlants
-							p.offeredby
-								| offered by #{key.userId}
-						p
-								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-								
-						button.form-button(href='#') Ja die wil ik
-				.col-md-3.col-sm-6.col-xs-12
-					.community-edition
-						each key in allPlants
-								h4 #{key.plantName}
-						.thumbnail
-						a(href='#')
-						img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-						each key in allPlants
-							p.offeredby
-								| offered by #{key.userId}
-						p
-								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-								
-						button.form-button(href='#') Ja die wil ik
-				.col-md-3.col-sm-6.col-xs-12
-					.community-edition
-						each key in allPlants
-								h4 #{key.plantName}
-						.thumbnail
-						a(href='#')
-						img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-						each key in allPlants
-							p.offeredby
-								| offered by #{key.userId}
-						p
-								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-								
-						button.form-button(href='#') Ja die wil ik
-
-				.col-md-3.col-sm-6.col-xs-12
-					.community-edition
-						each key in allPlants
-								h4 #{key.plantName}
-						.thumbnail
-						a(href='#')
-						img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-						each key in allPlants
-							p.offeredby
-								| offered by #{key.userId}
-						p
-								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-								
-						button.form-button(href='#') Ja die wil ik
-
-		.row
-			.portfolio-wrapper.text-center
-				.col-md-3.col-sm-6.col-xs-12
-					.community-edition
-						each key in allPlants
-								h4 #{key.plantName}
-						.thumbnail
-						a(href='#')
-						img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-						each key in allPlants
-							p.offeredby
-								| offered by #{key.userId}
-						p
-								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-								
-						button.form-button(href='#') Ja die wil ik
-				.col-md-3.col-sm-6.col-xs-12
-					.community-edition
-						each key in allPlants
-								h4 #{key.plantName}
-						.thumbnail
-						a(href='#')
-						img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-						each key in allPlants
-							p.offeredby
-								| offered by #{key.userId}
-						p
-								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-								
-						button.form-button(href='#') Ja die wil ik
-				.col-md-3.col-sm-6.col-xs-12
-					.community-edition
-						each key in allPlants
-								h4 #{key.plantName}
-						.thumbnail
-						a(href='#')
-						img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-						each key in allPlants
-							p.offeredby
-								| offered by #{key.userId}
-						p
-								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-								
-						button.form-button(href='#') Ja die wil ik
-
-				.col-md-3.col-sm-6.col-xs-12
-					.community-edition
-						each key in allPlants
-								h4 #{key.plantName}
-						.thumbnail
-						a(href='#')
-						img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-						each key in allPlants
-							p.offeredby
-								| offered by #{key.userId}
-						p
-								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-								
-						button.form-button(href='#') Ja die wil ik
+						//- button.form-button(href='#') Ja die wil ik
+				
 				//- .col-md-3.col-sm-6.col-xs-12
 				//- 	.community-edition
 				//- 		i.fa.fa-bug
@@ -298,24 +80,24 @@ block content
 				//- 			| Visually explore your data through a free-form drag-and-drop canvas, a broad range of modern data visualizations, and an easy-to-use report authoring experience.
 				
 
-				.row
-					.portfolio-wrapper.text-center
-						.col-sm-6.colmd-3.col-xs-12
-							.community-edition
-								i.fa.fa-book
-									.seperator
+				//- .row
+				//- 	.portfolio-wrapper.text-center
+				//- 		.col-sm-6.colmd-3.col-xs-12
+				//- 			.community-edition
+				//- 				i.fa.fa-book
+				//- 					.seperator
 
-							.card(style='width: 20rem;')
-							img.card-img-top.img-responsive(src='/img/pancake.jpg', alt='Card image cap')
-							.card-block
-							each key in allPlants
-								h4.card-title Title: #{key.plantName}
-								p.card-text
-									| Description: #{key.description}
-									p Aangeboden door: #{key.userId}, in CITY
-									p Aangeboden op: #{key.createdAt}
-								|
-								a.btn.btn-primary(href='#') Ja, die wil ik!
+				//- 			.card(style='width: 20rem;')
+				//- 			img.card-img-top.img-responsive(src='/img/pancake.jpg', alt='Card image cap')
+				//- 			.card-block
+				//- 			each key in allPlants
+				//- 				h4.card-title Title: #{key.plantName}
+				//- 				p.card-text
+				//- 					| Description: #{key.description}
+				//- 					p Aangeboden door: #{key.userId}, in CITY
+				//- 					p Aangeboden op: #{key.createdAt}
+				//- 				|
+				//- 				a.btn.btn-primary(href='#') Ja, die wil ik!
 			
 
 				
