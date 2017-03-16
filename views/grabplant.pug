@@ -1,0 +1,23 @@
+extends ./partials.pug
+block content
+
+	h1 test
+
+	each key in onePlant
+		p 
+			strong ID: 
+			| #{key.userId}:
+		p 
+			strong Stekje: 
+			| #{key.plantName}
+		p 
+			strong Omschrijving: 
+			| #{key.description}
+		p 
+			strong Aangeboden op: 
+			| #{key.createdAt}
+		br
+
+		
+	//- IMPORT JS
+	//- script(src='js/jquery-3.1.1.js')

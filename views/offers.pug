@@ -48,10 +48,13 @@ block content
 						each key in allPlants
 							p.offeredby
 								| offered by #{key.userId}
-						p
-								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-								
-						button.form-button(href='#') Ja die wil ik
+							p
+								a(href="/grabplant/?id=" + key.id)
+									| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
+						each key in allPlants		
+							button.form-button(onclick="location.href='/grabplant/?id=';" + key.id) Ja die wil ik
+
+
 				.col-md-3.col-sm-6.col-xs-12
 					.community-edition
 						each key in allPlants
