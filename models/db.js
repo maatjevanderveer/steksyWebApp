@@ -56,8 +56,11 @@ const Plant = db.define('plant', {
 	plantName: {
 		type: Sequelize.STRING,
 		allowNull: false,
+	},
+	description: {
+		type: Sequelize.STRING,
+		allowNull: false,
 	}
-
 });
 
 // RELATIONSHIP BETWEEN TABLES
@@ -83,6 +86,7 @@ db.sync({
 	.then(function(user){
 		return user.createPlant ({
 			plantName: "pancakeplant",
+			description: "ik bied een stekje aan van mijn lieve pannekoekenplantje",
 			userId: "user.userId"
 		})
 	})
