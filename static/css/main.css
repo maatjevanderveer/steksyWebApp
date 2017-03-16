@@ -292,9 +292,6 @@ html {
   position: relative;
   min-height: 100%; }
 
-body {
-  /* Margin bottom by footer height */ }
-
 footer {
   position: relative;
   bottom: 0;
