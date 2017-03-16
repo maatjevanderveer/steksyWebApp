@@ -41,9 +41,12 @@ block content
 										.home-contact
 
 								form.adress
-										input.form-input(type="text", name="homeadress" placeholder="type your adress")
-										button.form-button(type="submit" name="buurtbutton"
-										) bekijk je buurt
+									select(name='homeadress')
+										option(value='Amsterdam') Amsterdam
+										option(value='Rotterdam') Rotterdam
+										option(value='Utrecht') Utrecht
+										//- input.form-input(type="text", name="homeadress" placeholder="type your adress")
+									button.form-button(type="submit" name="buurtbutton") bekijk je buurt
 
 	section
 

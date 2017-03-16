@@ -65,12 +65,12 @@ app.post('/login', function(request, response){
 
 // LOGOUT
 app.get('/logout', function (request, response) {
-    if (request.session.user) {
-        request.session.destroy();
-        response.redirect('/');
-    } else {
-        response.redirect("/login");
-    }
+	if (request.session.user) {
+		request.session.destroy();
+		response.redirect('/');
+	} else {
+		response.redirect("/login");
+	}
 });
 
 // SIGN UP
@@ -129,15 +129,25 @@ app.post('/newplant', bodyParser.urlencoded({extended: true}), function(request,
 
 // ALL PLANTS
 app.get('/offers', (request, response) => {
+
 	user = request.session.user
 	if(user === undefined) {
 		response.redirect('/')
 	}
 	else {
-		db.Plant.findAll()
-		.then((allPlants) => {
+		db.Plant.findAll(
+		{
+			include: [db.User]
+		}
+		).then((allPlants) => {
+			console.log("hier onder lezen")
+			console.log(allPlants)
 			console.log(allPlants[0].dataValues)
-			response.render('offers', {allPlants:allPlants})
+			response.render('offers',
+			{
+				allPlants:allPlants,
+				name: request.session.user.userName
+			})
 		})
 	}
 })
