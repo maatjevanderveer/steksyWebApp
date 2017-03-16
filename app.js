@@ -63,6 +63,16 @@ app.post('/login', function(request, response){
 	});
 });
 
+// LOGOUT
+app.get('/logout', function (request, response) {
+    if (request.session.user) {
+        request.session.destroy();
+        response.redirect('/');
+    } else {
+        response.redirect("/login");
+    }
+});
+
 // SIGN UP
 app.get('/signup', function (request, response){
 	response.render('signup')
