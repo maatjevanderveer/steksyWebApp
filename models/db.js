@@ -70,7 +70,7 @@ Plant.belongsTo(User); // a plant belongs to a single person
 
 // SYNC DATABASE
 db.sync({
-	force:false				// drops tables before recreating
+	force:true			// drops tables before recreating
 })
 .then(function(){
 	return User.create ({
@@ -90,10 +90,29 @@ db.sync({
 			userId: "user.userId"
 		})
 	})
+	.then(function(){
+		return User.create ({
+			userName: "Kirsten",
+			email: "kirsten@mail.com",
+			password: "123",
+			name: "kirsten",
+			adress: "Utrechtsestraat",
+			houseNumber: "241",
+			zipcode: "1015DT",
+			city: "Utrecht"
+		})
+	})
+	.then(function(user){
+		return user.createPlant ({
+			plantName: "Cactus",
+			description: "Pas op ik prik!",
+			userId: "user.userId"
+		})
+	})
 	.catch ( function (error){
 		console.log(error)
-	});
-});
+	})
+})
 
 
 
