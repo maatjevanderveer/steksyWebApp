@@ -347,9 +347,22 @@ button {
     top: 1px;
     outline: none; }
 
+
+.container.grabplant p {
+  color: #565656;
+  background-color: transparent;
+  border-color: #565656;
+  border-radius: 0;
+  padding-top: 20px; }
+
+ul.filters {
+  color: #565656;
+  background-color: gray; }
+
 .wrapper {
   background: #76b852;
   border: 1px solid #000; }
+
 
 .img-responsive {
   max-width: 25%; }
