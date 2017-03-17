@@ -70,7 +70,7 @@ Plant.belongsTo(User); // a plant belongs to a single person
 
 // SYNC DATABASE
 db.sync({
-	force:true					// drops tables before recreating
+	force:false				// drops tables before recreating
 })
 .then(function(){
 	return User.create ({

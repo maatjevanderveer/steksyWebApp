@@ -136,7 +136,10 @@ app.get('/offers', (request, response) => {
 		response.redirect('/')
 	}
 	else {
+
+		
 		db.Plant.findAll(
+
 		{
 			include: [db.User]
 		}

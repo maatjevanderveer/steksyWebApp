@@ -24,16 +24,18 @@ block content
 	//- 				a(href='/login') Login
 	//- 			li
 	//- 				a(href='/signup') Sign up
-		
-	.container
-		.login
-			form.register(action='/login', method='post')
-				
-				h2.form-title Please log in below
-				input.form-input(type='email', name='email' placeholder='What is your email?' required autofocus)
-				input.form-input(type='password', name='password', placeholder='What is your password?')
-				button.form-button(type='submit') Submit
-				
+	section
+		.loginpage
+			.home-wrapper
+				.container
+					.login
+						form.register(action='/login', method='post')
+							
+							h2.form-title Please log in below
+							input.form-input(type='email', name='email' placeholder='What is your email?' required autofocus)
+							input.form-input(type='password', name='password', placeholder='What is your password?')
+							button.form-button(type='submit') Submit
+					
 	//- footer.footer#footer.footer-menu.sections.footer-menu
 	//- 	.container
 	//- 		.row

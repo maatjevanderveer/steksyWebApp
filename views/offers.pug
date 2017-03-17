@@ -52,7 +52,23 @@ block content
 	//- 		.categoryb B
 	//- 		.categoryb B
 
-		
+
+	//- .category_container
+	//- 	p.category_item#all All
+	//- 	p.category_item#amsterdam Amsterdam
+	//- 	p.category_item#rotterdam Rotterdam
+	//- 	p.category_item#utrecht Utrecht
+	//- 	p.category_item#almere Almere
+
+	//- .block_container
+	//- 	img(src='/img/Amsterdam.jpg' class='plant_item amsterdam')
+	//- 	img(src='/img/Rotterdam.jpg' class='plant_item rotterdam')
+	//- 	img(src='/img/Utrecht.jpg' class='plant_item utrecht')
+	//- 	img(src='/img/Utrecht.jpg' class='plant_item utrecht')
+
+
+
+						
 	.container.offers
 
 		.row
@@ -63,10 +79,11 @@ block content
 							h4 #{key.plantName}
 							.thumbnail
 							a(href='#')
-							img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-							
+							img(src='/img/blad.jpeg', alt='Lights', style='width:100%')							
 							p.offeredby
-							//- | offered by #{key.user.userName}
+							//- p.offeredby Offered by: #{key.user.userName}
+							//- p.offeredby In: #{key.user.city}
+		  				//- | offered by #{key.user.userName}
 							p
 								a(href="/grabplant/?id=" + key.id)
 										| #{key.description}	
@@ -85,6 +102,25 @@ block content
 	//- 	});
 	
 
+
+			
+	//- script.
+	//- 	$(document).ready(function(){
+	//- 		$('.category_item').click(function(){
+	//- 		var category = $(this).attr('id');
+	//- 		if(category == 'all'){
+	//- 			$('.plant_item').addClass('hide');
+	//- 			setTimeout(function(){
+	//- 					$('.plant_item').removeClass('hide');
+	//- 			}, 300);
+	//- 		} else {
+	//- 				$('.plant_item').addClass('hide');
+	//- 				setTimeout(function(){
+	//- 					$('.' + category).removeClass('hide');
+	//- 			}, 300);
+	//- 			}
+	//- 	});
+	//- 	});
 
 				
 
