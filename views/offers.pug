@@ -26,12 +26,12 @@ block content
 			 
 	section#business.portfolio.sections
 		.container
-				.head_title.text-center
-					h1 Hallo
-						span(style='color:#82ca9c;font-weight:bold')  #{name}!
-					h4 Bekijk stekjes bij jou in de buurt:
-					section#business.portfolio.sections
-	
+			.head_title.text-center
+				h1 Hallo
+				span(style='color:#82ca9c;font-weight:bold')  #{name}!
+				h4 Bekijk stekjes bij jou in de buurt:
+				section#business.portfolio.sections
+					
 	//- section
 	//- 	.container
 	//- 		ul.filters
@@ -78,17 +78,15 @@ block content
 						.community-edition
 							h4 #{key.plantName}
 							.thumbnail
-							a(href='#')
-							img(src='/img/blad.jpeg', alt='Lights', style='width:100%')							
-							p.offeredby
+								img(src="/img/blad.jpeg", alt='Lights', style='width:100%')
 							//- p.offeredby Offered by: #{key.user.userName}
 							//- p.offeredby In: #{key.user.city}
-		  				//- | offered by #{key.user.userName}
+							//- | offered by #{key.user.userName}
 							p
 								a(href="/grabplant/?id=" + key.id)
-										| #{key.description}	
-							
-							button.form-button(onclick="location.href='/grabplant/?id=';" + key.id) Ja die wil ik
+									| #{key.description}	
+									
+									button.form-button(onclick="location.href='/grabplant/?id=';" + key.id) Ja die wil ik
 
 	//- //-IMPORT JS
 	//- script(src="/js/jquery-3.1.1.js")
