@@ -32,7 +32,50 @@
 //   }
 // }
 
+.category_container{
+  width: 800px;
+  display:block;
+  margin: 0 auto;
+  overflow: hidden;
+}
 
+.category_item{
+  float: left;
+  width: 20%;
+  padding: 20px 0;
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+  color: black;
+}
+
+.category_item:hover{
+  background-color: black;
+  color: white;
+
+}
+
+.block_container{
+  width: 800px;
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.plant_item{
+  box-sizing: border-box;
+  float: left;
+  padding: 2px;
+  width: 20%;
+  transition: all 0.4s ease-in-out;
+}
+
+.hide{
+  transform: scale(0);
+  width: 0;
+  padding: 0;
+  transition: all 0.4s ease-in-out;
+}
 html,
 body {
     font-size: 15px;
@@ -111,6 +154,11 @@ form select{
     background: #fff;
 }
 
+section .loginpage {
+  background:linear-gradient(to left, #76b852, #8DC26F);
+  
+}
+
 
 /*For Home Section*/
 .home{
@@ -122,6 +170,7 @@ form select{
     -o-background-size:cover;
     -ms-background-size:cover;
 }
+
 .home-wrapper{
     padding:300px 0px;
     overflow:hidden;
@@ -190,10 +239,7 @@ h1{
   text-align: left;
 }
 
-//OFFERSE
-.container .offers{
-  background:red;
-}
+
 
 
 // html,
@@ -548,6 +594,29 @@ input {
 
 }
 
+.login textarea {
+  resize: none;
+  width: 100%;
+  height: 10em;
+  margin-bottom: 25px;
+  padding: 0 15px 2px;
+  font-size: 17px;
+  background: white;
+  border: 2px solid #ebebeb;
+  border-radius: 4px;
+  // @include box-shadow(inset 0 -2px #ebebeb);
+
+  &:focus {
+    border-color: #62c2e4;
+    outline: none;
+    // @include box-shadow(inset 0 -2px #62c2e4);
+  }
+
+}
+
+
+
+
 button {
   position: relative;
   vertical-align: top;
@@ -572,6 +641,10 @@ button {
   }
 }
 
+.wrapper{
+  background: #76b852;
+  border: 1px solid #000;
+}
 // .indexpage{
 // 	background-image: url("./img/stekje.jpeg") !important;
 // 	height: 1000px;
