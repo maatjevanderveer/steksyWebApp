@@ -118,7 +118,8 @@ app.post('/newplant', bodyParser.urlencoded({extended: true}), function(request,
 	console.log(request.session)
 	db.Plant.create({
 		plantName: request.body.newPlantName,
-		description: request.body.newDescription
+		description: request.body.newDescription,
+		user_id: request.session.user.id
 	}).then( (newPlant) =>{
 		console.log(newPlant)
 		response.redirect('/offers')
@@ -135,7 +136,10 @@ app.get('/offers', (request, response) => {
 		response.redirect('/')
 	}
 	else {
+
+		
 		db.Plant.findAll(
+
 		{
 			include: [db.User]
 		}
