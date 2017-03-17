@@ -118,7 +118,8 @@ app.post('/newplant', bodyParser.urlencoded({extended: true}), function(request,
 	console.log(request.session)
 	db.Plant.create({
 		plantName: request.body.newPlantName,
-		description: request.body.newDescription
+		description: request.body.newDescription,
+		userId: request.session.user.id
 	}).then( (newPlant) =>{
 		console.log(newPlant)
 		response.redirect('/offers')
@@ -159,12 +160,14 @@ app.get('/grabplant', (request, response) => {
     db.Plant.findOne({
         where: {
             id: request.query.id
-        },
+        },    
+		include: [db.User]
     })
     .then((onePlant) => {
         console.log('this logges data of specific post')
-        console.log(onePlant[0])
-        response.render('grabplant', {onePlant:onePlant})
+        console.log(onePlant)
+        response.render('grabplant', {
+        	onePlant:onePlant})
     })
 })
 

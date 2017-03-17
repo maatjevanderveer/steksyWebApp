@@ -1,3 +1,20 @@
 // -----------------------------------------------------------------------------
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
+
+$primary-color:  green;
+$p-color: #565656;
+$background-color: gray;
+
+.container.grabplant p {
+	color: $p-color;
+	background-color: transparent;
+    border-color: $p-color;
+    border-radius:0;
+    padding-top:20px;
+};
+
+ul.filters {
+	color: $p-color;
+	background-color: gray;
+}
