@@ -26,15 +26,17 @@ block content
 	//- 				a(href='/signup') Sign up
 	section
 		.loginpage
-			.home-wrapper
-				.container
+			.login-wrapper
+				
 					.login
 						form.register(action='/login', method='post')
 							
-							h2.form-title Please log in below
+							//- h2.form-title Please log in below
 							input.form-input(type='email', name='email' placeholder='What is your email?' required autofocus)
 							input.form-input(type='password', name='password', placeholder='What is your password?')
-							button.form-button(type='submit') Submit
+							button.form-button-green(type='submit') Submit
+							p.message Not registered? 
+								a(href="/signup") Create an account
 					
 	//- footer.footer#footer.footer-menu.sections.footer-menu
 	//- 	.container
