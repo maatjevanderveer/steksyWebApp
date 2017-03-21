@@ -1,126 +1,261 @@
 extends ./partials.pug
 block content
-	//- .navbar.navbar-default.transparent
-	//- 	.container
-	//- 	.navbar-header
-	//- 		button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-	//- 			span.sr-only Toggle navigation
-	//- 			span.icon-bar
-	//- 			span.icon-bar
-	//- 			span.icon-bar
-	//- 		|
-	//- 		a.navbar-brand(href='/') Steksie
-	//- 			img(src='img/plant.png', alt='Logo')
-	//- 	#bs-example-navbar-collapse-1.collapse.navbar-collapse
-	//- 		ul.nav.navbar-nav.navbar-right
-	//- 			li.active
-	//- 				a(href='/') Home
-	//- 			li
-	//- 				a(href='/offers') Aanbod
-	//- 			li
-	//- 				a(href='/addplant') Voeg stekje toe
-	//- 			li
-	//- 				a(href='/login') Login
-	//- 			li
-	//- 				a(href='/signup') Sign up
+    //- .navbar.navbar-default.transparent
+    //-     .container
+    //-     .navbar-header
+    //-         button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+    //-             span.sr-only Toggle navigation
+    //-             span.icon-bar
+    //-             span.icon-bar
+    //-             span.icon-bar
+    //-         |
+    //-         a.navbar-brand(href='/') Steksie
+    //-             img(src='img/plant.png', alt='Logo')
+    //-     #bs-example-navbar-collapse-1.collapse.navbar-collapse
+    //-         ul.nav.navbar-nav.navbar-right
+    //-             li.active
+    //-                 a(href='/') Home
+    //-             li
+    //-                 a(href='/offers') Aanbod
+    //-             li
+    //-                 a(href='/addplant') Voeg stekje toe
+    //-             li
+    //-                 a(href='/login') Login
+    //-             li
+    //-                 a(href='/signup') Sign up
 
 
-	header#home.home
-		.overlay-fluid-block
-			.container.text-center
-				.row
-					.home-wrapper
-						.col-md-10.col-md-offset-1
-							.home-content
-								h1#homeHeading Wil jij je eigen stekje?
-								hr
-								h2 Leen makkelijk en snel spullen van je buren
+    header#home.home
+        
+            .container.text-center
+                .row
+                    .home-wrapper
+                        .col-md-10.col-md-offset-1
+                            .home-content
+                                h1#homeHeading Wil jij je eigen stekje?
+                                hr
+                                h2 Leen makkelijk en snel spullen van je buren
 
-								.row
-									.col-md-6.col-md-offset-3.col-sm-12.col-xs-12
-										.home-contact
+                               
 
-								form.adress
-									select(name='homecity')
-										option(value='Amsterdam' name='Amsterdam') Amsterdam
-										option(value='Rotterdam' name= 'Rotterdam') Rotterdam
-										option(value='Utrecht' name='Utrechts') Utrecht
-										//- input.form-input(type="text", name="homeadress" placeholder="type your adress")
-									button.form-button(type="submit" name="buurtbutton") bekijk je buurt
+                                form.adress
+                                    select(name='homecity')
+                                        option(value='Amsterdam' name='Amsterdam') Amsterdam
+                                        option(value='Rotterdam' name= 'Rotterdam') Rotterdam
+                                        option(value='Utrecht' name='Utrechts') Utrecht
+                                        //- input.form-input(type="text", name="homeadress" placeholder="type your adress")
+                                    button.form-button(type="submit" name="buurtbutton") bekijk je buurt
 
-	section
-		.testimonials
-			.container.text-center
-				.row
-					.home-wrapper.index
-						
-							
-								h1 Wat zeggen anderen over ons?
-								hr
-								h2 Leen makkelijk en snel spullen van je buren
+    section
+        .testimonials
+            
+            .container
+              .row
+                .col-md-offset-2.col-md-8.text-center
+                  h1 Wie hebben we al blij gemaakt met een stekje?
+              .row
+                .col-md-offset-2.col-md-8
+                  #quote-carousel.carousel.slide(data-ride='carousel')
+                    ol.carousel-indicators
+                      li.active(data-target='#quote-carousel', data-slide-to='0')
+                      li(data-target='#quote-carousel', data-slide-to='1')
+                      li(data-target='#quote-carousel', data-slide-to='2')
+                      li(data-target='#quote-carousel', data-slide-to='3')
+                      li(data-target='#quote-carousel', data-slide-to='4')
 
-								.row
-									.col-md-6.col-md-offset-3.col-sm-12.col-xs-12
-										.home-contact
-											h1 Ik ben Nard
+                    .carousel-inner
+                      .item.active
+                        blockquote
+                          .row
+                            .col-sm-3.text-center
+                              img.img-circle(src='/img/arthur.jpg', style='width: 100px;height:100px;')
+                            .col-sm-9
+                              p.testimonial-description
+                                | Ik voel me weer helemaal sexy door steksy.
+                              |  
+                              small.testimonial-title Arthur Poot, 
+                                //- span   Product Owner
+                      .item
+                        blockquote
+                          .row
+                            .col-sm-3.text-center
+                              img.img-circle(src="/img/lisa.jpg", style='width: 100px;height:100px;')
+                            .col-sm-9
+                              p.testimonial-description
+                                | Door steksie voel ik me nooit meer alleen omdat ik omringt ben door planten. 
+                              |  
+                              small.testimonial-title Lisa Maagdenberg
+                                //- span   Back-end Web Developer
 
-								
+                      .item
+                        blockquote
+                          .row
+                            .col-sm-3.text-center
+                              img.img-circle(src='/img/arne.jpg', style='width: 100px;height:100px;')
+                            .col-sm-9
+                              p.testimonial-description
+                                | Wat een goed idee!
+                              small.testimonial-title Arne Oldenhaven
+                                //- span     Kok
+                      .item
+                        blockquote
+                          .row
+                            .col-sm-3.text-center
+                              img.img-circle(src='/img/hajar.jpg', style='width: 100px;height:100px;')
+                            .col-sm-9
+                              p.testimonial-description
+                                | Door Steksie heb ik mijn buren beter leren kennen
+                              |  
+                              small.testimonial-title Hajar Mokhtafa
+                                //- span    CEO 
+                    a.left.carousel-control(data-slide='prev', href='#quote-carousel')
+                      i.fa.fa-chevron-left
+                    a.right.carousel-control(data-slide='next', href='#quote-carousel')
+                      i.fa.fa-chevron-right
+        
+
+                        
+                            
+                                //- h1 Wat zeggen anderen over ons?
+                                //- hr
+                                //- h2 Leen makkelijk en snel spullen van je buren
+                                //- div.carousel.slide#text-carousel(data-ride='carousel')
+                                //-     ol.carousel-indicators
+                                //-         li.active(data-target='#quote-carousel', data-slide-to='0')
+                                //-         li(data-target='#quote-carousel', data-slide-to='1')
+                                //-         li(data-target='#quote-carousel', data-slide-to='2')
+                                //-     .carousel-inner
+                                //-         .item-active
+                                //-             .row
+                                    
+                                //-                 .col-md-4.col-sm-4.col-xs-12
+
+                                //-                         .item.active
+                                //-                             .carousel-content
+                                //-                                 div.testimonial#testimonial-blue
+                                //-                                     .pic
+                                //-                                         img(src="/img/kirsten.png", alt='Lights', style='width:100%')
+                                //-                                     p.description Hide head under blanket so no one can see vommit food and eat it again for you call this cat food? and kitty poochy.
+                                //-                                     h3.testimonial-title Nard Lamboo- Web Developer
+
+                                //-                 .col-md-4.col-sm-4.col-xs-12
+                                //-                         .item.active
+                                //-                             .carousel-content
+                                //-                                 div.testimonial#testimonial-red
+                                //-                                     .pic
+                                //-                                         img(src="/img/kirsten.png", alt='Lights', style='width:100%')
+                                //-                                     p.description Hide head under blanket so no one can see vommit food and eat it again for you call this cat food? and kitty poochy.
+                                //-                                     h3.testimonial-title Nard Lamboo- Web 
+                                //-                 .col-md-4.col-sm-4.col-xs-12
+                                //-                         .item.active
+                                //-                             .carousel-content
+                                //-                                 div.testimonial#testimonial-yellow
+                                //-                                     .pic
+                                //-                                         img(src="/img/kirsten.png", alt='Lights', style='width:100%')
+                                //-                                     p.description Hide head under blanket so no one can see vommit food and eat it again for you call this cat food? and kitty poochy.
+                                //-                                     h3.testimonial-title Nard Lamboo- Web Developer
+                                //-                 .col-md-4.col-sm-4.col-xs-12
+                                //-                         .item
+                                //-                             .carousel-content
+                                //-                                 div.testimonial#testimonial-yellow
+                                //-                                     .pic
+                                //-                                         img(src="/img/kirsten.png", alt='Lights', style='width:100%')
+                                //-                                     p.description Hide head under blanket so no one can see vommit food and eat it again for you call this cat food? and kitty poochy.
+                                //-                                     h3.testimonial-title Nard Lamboo- Web Developer
+                                //-                 a.left.carousel-control(data-slide='prev', href='#quote-carousel')
+                                //-                     i.fa.fa-chevron-left
+                                //-                 //- a.right.carousel-control(data-slide='next', href='#quote-carousel')
+                                //-                 //-     i.fa.fa-chevron-right
+
+    //- section
+    //-     .container
+    //-         .row
+    //-             div#testimonial-slider.owl-carousel
+    //-                 .testimonial
+    //-                     .pic
+    //-                         img(src="/img/kirsten.png", alt='Lights', style='width:100%')
+    //-                     p.description Hide head under blanket so no one can see vommit food and eat it again for you call this cat food? and kitty poochy.
+    //-                     h3.testimonial-title Nard Lamboo- Web Developer
+
+    //-                 .testimonial
+    //-                     .pic
+    //-                         img(src="/img/kirsten.png", alt='Lights', style='width:100%')
+    //-                     p.description Hide head under blanket so no one can see vommit food and eat it again for you call this cat food? and kitty poochy.
+    //-                     h3.testimonial-title Nard Lamboo- Web Developer
+
+    //-                 .testimonial
+    //-                     .pic
+    //-                         img(src="/img/kirsten.png", alt='Lights', style='width:100%')
+    //-                     p.description Hide head under blanket so no one can see vommit food and eat it again for you call this cat food? and kitty poochy.
+    //-                     h3.testimonial-title Nard Lamboo- Web Developer
 
 
-	//- footer.footer#footer.footer-menu.sections.footer-menu
-	//- 	.container
-	//- 		.row
-	//- 			.footer-menu-wrapper
-	//- 				.col-md-6.col-sm-6.col-xs-12
-	//- 					.menu-item
-	//- 						.navbar-brand Steksie
-	//- 							img(src='img/plant.png', alt='Logo')
-	//- 						p.text-muted 
-	//- 							ul
-	//- 								li
-	//- 									a(href='/') Home
-	//- 								li
-	//- 									a(href='/offers') Aanbod
-	//- 								li
-	//- 									a(href='/login') Login
-	//- 								li
-	//- 									a(href='/login') Register
-	//- 	//- p.text-muted Steksy
-		//-   ul
-		//- 	li 
-		//- 	  a(href='/') Home
-		//- 	li
-		//- 	  a(href='/offers') Aanbod
-		//- 	li
-		//- 	  a(href='/login') Login
-		//- 	li
-		//- 	  a(href='/register') Register
-	//- .container-fluid
-
-
-	//- 	div#image-firstpage
-	//- 		.navbar.navbar-top
-	//- 			.navbar-brand
-	//- 				a(href='/' class="navbar-brand") Steksie
-	//- 					img(alt='Brand', src='img/plant.png')
-
-	//- 				ul
-	//- 					li
-	//- 						a.btn-login(href='/login') Log In
-	//- 					li
-	//- 						a.btn-signup(href='/signup') Sign up 
-		
-			//- section
-			//- 	.container
-			//- 		h1 Do you want your own stekje?
-			//- 		h2 Leen makkelijk en snel spullen van je buren
-			//- 		form.adress
-			//- 			input.form-input(type="text", name="homeadress" placeholder="type your adress")
-			//- 			button.form-button(type="submit" name="buurtbutton"
-			//- 			) bekijk je buurt
-				
 
 
 
-	
+
+
+    
+                                        
+    
+
+                                
+
+
+    //- footer.footer#footer.footer-menu.sections.footer-menu
+    //-     .container
+    //-         .row
+    //-             .footer-menu-wrapper
+    //-                 .col-md-6.col-sm-6.col-xs-12
+    //-                     .menu-item
+    //-                         .navbar-brand Steksie
+    //-                             img(src='img/plant.png', alt='Logo')
+    //-                         p.text-muted 
+    //-                             ul
+    //-                                 li
+    //-                                     a(href='/') Home
+    //-                                 li
+    //-                                     a(href='/offers') Aanbod
+    //-                                 li
+    //-                                     a(href='/login') Login
+    //-                                 li
+    //-                                     a(href='/login') Register
+    //-     //- p.text-muted Steksy
+        //-   ul
+        //-     li 
+        //-       a(href='/') Home
+        //-     li
+        //-       a(href='/offers') Aanbod
+        //-     li
+        //-       a(href='/login') Login
+        //-     li
+        //-       a(href='/register') Register
+    //- .container-fluid
+
+
+    //-     div#image-firstpage
+    //-         .navbar.navbar-top
+    //-             .navbar-brand
+    //-                 a(href='/' class="navbar-brand") Steksie
+    //-                     img(alt='Brand', src='img/plant.png')
+
+    //-                 ul
+    //-                     li
+    //-                         a.btn-login(href='/login') Log In
+    //-                     li
+    //-                         a.btn-signup(href='/signup') Sign up 
+        
+            //- section
+            //-     .container
+            //-         h1 Do you want your own stekje?
+            //-         h2 Leen makkelijk en snel spullen van je buren
+            //-         form.adress
+            //-             input.form-input(type="text", name="homeadress" placeholder="type your adress")
+            //-             button.form-button(type="submit" name="buurtbutton"
+            //-             ) bekijk je buurt
+                
+
+
+
+    
 

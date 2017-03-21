@@ -25,13 +25,99 @@ block content
 	//- 				a(href='/signup') Sign up
 			 
 	section#business.portfolio.sections
-		.container
-			.head_title.text-center
-				h1 Hallo
-					span(style='color:#82ca9c;font-weight:bold')  #{name}!
-				h4 Bekijk stekjes bij jou in de buurt:
-				section#business.portfolio.sections
+		.container.login-wrapper
+				.head_title.text-center
+					h1 Hallo
+						span(style='color:#82ca9c;font-weight:bold')  #{name}!
+					h4 Bekijk stekjes bij jou in de buurt:
+					section#business.portfolio.sections
 					
+	
+
+
+				.category_container
+					p.category_item#all All
+					p.category_item#Amsterdam Amsterdam
+					p.category_item#Rotterdam Rotterdam
+					p.category_item#Utrecht Utrecht
+					p.category_item#Almere Almere
+
+				.block_container
+					//- img(src='/img/Amsterdam.jpg' class='plant_item amsterdam')
+					//- img(src='/img/Rotterdam.jpg' class='plant_item rotterdam')
+					//- img(src='/img/Utrecht.jpg' class='plant_item utrecht')
+					//- img(src='/img/Utrecht.jpg' class='plant_item utrecht')
+
+	
+						
+	
+				.row
+					.portfolio-wrapper.text-center
+						each plant in allPlants
+							div(class="col-md-3 col-sm-6 col-xs-12 plant_item " + plant.user.city)
+								.community-edition
+									h4 #{plant.plantName}
+									.thumbnail
+										img(src="/img/blad.jpeg", alt='Lights', style='width:100%')
+									//- p.offeredby Offered by: #{key.user.userName}
+									p.offeredby In: #{plant.user.city}
+									| offered by #{plant.user.userName}
+									p
+										a(href="/grabplant/?id=" + plant.id)
+											| #{plant.description}	
+
+											button.form-button(onclick="location.href='/grabplant/?id=';" + plant.id) Ja die wil ik
+
+	//- .container.offers
+
+	//- 	.row
+	//- 		.portfolio-wrapper.text-center
+	//- 			.col-md-3.col-sm-6.col-xs-12   
+	//- 				.community-edition
+	//- 					each key in allPlants
+	//- 							h4 #{key.plantName}
+	//- 					.thumbnail
+	//- 					a(href='#')
+	//- 					img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
+	//- 					each key in allPlants
+	//- 						//- p.offeredby Offered by: #{key.user.userName}
+	//- 						//- p.offeredby In: #{key.user.city}
+	//- 							//- | offered by #{key.user.userName}
+					
+	//- 						p
+	//- 							a(href="/grabplant/?id=" + key.id)
+	//- 								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
+	//- 					each key in allPlants		
+	//- 						button.form-button(onclick="location.href='/grabplant/?id=';" + key.id) Ja die wil ik
+
+
+	//- 			.col-md-3.col-sm-6.col-xs-12
+	//- 				.community-edition
+	//- 					each key in allPlants
+	//- 							h4 #{key.plantName}
+	//- 					.thumbnail
+	//- 					a(href='#')
+	//- 					img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
+	//- 					each key in allPlants
+	//- 						p.offeredby
+	//- 							| offered by #{key.userId}
+	//- 					p
+	//- 							| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	//- section
 	//- 	.container
 	//- 		ul.filters
@@ -51,59 +137,6 @@ block content
 	//- 		.categoryb B
 	//- 		.categoryb B
 	//- 		.categoryb B
-
-
-	.category_container
-		p.category_item#all All
-		p.category_item#Amsterdam Amsterdam
-		p.category_item#Rotterdam Rotterdam
-		p.category_item#Utrecht Utrecht
-		p.category_item#Almere Almere
-
-	.block_container
-		img(src='/img/Amsterdam.jpg' class='plant_item amsterdam')
-		img(src='/img/Rotterdam.jpg' class='plant_item rotterdam')
-		img(src='/img/Utrecht.jpg' class='plant_item utrecht')
-		img(src='/img/Utrecht.jpg' class='plant_item utrecht')
-
-	script.
-		$(document).ready(function(){
-			$('.category_item').click(function(){
-			var category = $(this).attr('id');
-			if(category == 'all'){
-				$('.plant_item').addClass('hide');
-				setTimeout(function(){
-						$('.plant_item').removeClass('hide');
-				}, 300);
-			} 
-			else {
-				$('.plant_item').addClass('hide');
-					setTimeout(function(){
-						$('.' + category).removeClass('hide');
-					}, 300);
-				}
-			});
-		});
-
-						
-	.container.offers
-
-		.row
-			.portfolio-wrapper.text-center
-				each plant in allPlants
-					div(class="col-md-3 col-sm-6 col-xs-12 plant_item " + plant.user.city)
-						.community-edition
-							h4 #{plant.plantName}
-							.thumbnail
-								img(src="/img/blad.jpeg", alt='Lights', style='width:100%')
-							//- p.offeredby Offered by: #{key.user.userName}
-							p.offeredby In: #{plant.user.city}
-							| offered by #{plant.user.userName}
-							p
-								a(href="/grabplant/?id=" + plant.id)
-									| #{plant.description}	
-
-									button.form-button(onclick="location.href='/grabplant/?id=';" + plant.id) Ja die wil ik
 
 	//- //-IMPORT JS
 	//- script(src="/js/jquery-3.1.1.js")

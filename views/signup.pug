@@ -25,7 +25,32 @@ block content
 	//- 				a(href='/signup') Sign up
 
 
-	
+	section
+		.loginpage
+			.login-wrapper
+				
+					.login
+						.modal-bodies
+							.modal-body.modal-body-step-1.is-showing
+									
+									form(action='/signup', method='post')
+										input.form-input(type='text', name='userName' placeholder='Choose a username' autofocus)
+										input.form-input(type='text', name='email' placeholder='What is your email?')
+										input.form-input(type='password', name='password', placeholder='Choose your password?')
+										button.button.form-button-green.next-button(type='button') Next
+										p.message Already registered? 
+											a(href="/login") Log in 
+
+									.modal-body.modal-body-step2
+								
+										input.form-input(type='text', name='name' placeholder='What is your first and last name?' required autofocus)
+										input.form-input(type='text', name='adress' placeholder='In which street do you live?')
+										input.form-input(type='number', name='houseNumber' placeholder='What is your house number?')
+										input.form-input(type='text', name='zipcode' placeholder='What is your zipcode?')
+										input.form-input(type='text', name='city' placeholder='In which city do you live')
+											
+										button.form-button-green(onclick="location.href='/signup'") Previous
+										button.form-button-green(type='submit') Submit
 	.container
 		.login
 			form(action='/signup', method='post')
