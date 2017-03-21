@@ -67,6 +67,28 @@ block content
 											| #{plant.description}	
 
 											button.form-button(onclick="location.href='/grabplant/?id=';" + plant.id) Ja die wil ik
+	#mapje
+
+	script.
+		function initMap() { 
+			var uluru = {lat: 52.132633, lng: 5.291266};
+			var map = new google.maps.Map(document.getElementById('mapje'), {
+				zoom: 0,
+				center: uluru
+			});
+			//- var marker = new google.maps.Marker({
+			//- 	position: uluru,
+			//- 	map: map
+			//- });
+		}
+	
+	script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDoPPdYFyfxilJCSTebGPx6Pv0XU53Wzy0&callback=initMap', async defer)
+
+
+
+
+	
+
 
 	//- .container.offers
 

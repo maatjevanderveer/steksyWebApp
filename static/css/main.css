@@ -516,4 +516,14 @@ footer {
   height: 150px;
   background-color: #f5f5f5; }
 
+.map {
+  width: 100px;
+  height: 100px; }
+
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
 /*# sourceMappingURL=main.css.map */
