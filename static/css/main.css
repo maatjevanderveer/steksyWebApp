@@ -157,6 +157,9 @@ form select {
 .item blockquote img {
   margin-bottom: 10px; }
 
+.item blockquote p {
+  font-weight: normal; }
+
 .testimonial-description {
   padding: 0 15px;
   font-size: 13px;
@@ -252,17 +255,9 @@ form select {
   background-color: black;
   color: white; }
 
-.block_container {
-  width: 800px;
-  display: block;
-  margin: 0 auto;
-  box-sizing: border-box; }
-
 .plant_item {
   box-sizing: border-box;
   float: left;
-  padding: 2px;
-  width: 20%;
   transition: all 0.4s ease-in-out; }
 
 .hide {
@@ -345,8 +340,8 @@ section .loginpage {
 .community-edition p {
   color: #777777; }
 
-.community-edition .offeredby p {
-  font-size: 12px;
+.offeredby p {
+  font-size: 10px;
   color: #777777; }
 
 .portfolio-wrapper2 {
@@ -461,7 +456,6 @@ button {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   background: #4CAF50;
   border: 0;
-  border-bottom: 2px solid #d76b60;
   border-radius: 5px;
   cursor: pointer; }
   button:active {
@@ -517,7 +511,6 @@ html {
 
 footer {
   position: absolute;
-  bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 150px;

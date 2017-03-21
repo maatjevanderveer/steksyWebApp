@@ -85,7 +85,7 @@ db.sync({
 	})
 	.then(function(user){
 		return user.createPlant ({
-			plantName: "pannekoekenplantje",
+			plantName: "pancakeplant",
 			description: "ik bied een stekje aan van mijn lieve pannekoekenplantje",
 			userId: "user.userId"
 		})
@@ -109,24 +109,6 @@ db.sync({
 			userId: "user.userId"
 		})
 	})
-	.then(function(){
-		return User.create ({
-			userName: "Marijke",
-			email: "marijke@mail.com",
-			password: "123",
-			name: "Marijke",
-			adress: "Utrechtsestraat",
-			houseNumber: "241",
-			zipcode: "1015DT",
-			city: "Utrecht"
-		})
-	})
-	.then(function(user){
-		return user.createPlant ({
-			plantName: "Cactus",
-			description: "Pas op ik prik!",
-			userId: "user.userId"
-		})
 	.catch ( function (error){
 		console.log(error)
 	})

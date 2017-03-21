@@ -240,7 +240,7 @@ h1{
 }
 
 .item blockquote p{
-
+  font-weight: normal;
 }
 
 
@@ -380,18 +380,18 @@ h1{
 
 }
 
-.block_container{
-  width: 800px;
-  display: block;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
+// .block_container{
+//   width: 800px;
+//   display: block;
+//   margin: 0 auto;
+//   box-sizing: border-box;
+// }
 
 .plant_item{
   box-sizing: border-box;
   float: left;
-  padding: 2px;
-  width: 20%;
+  // padding: 2px;
+  // width: 20%;
   transition: all 0.4s ease-in-out;
 }
 
@@ -505,8 +505,8 @@ section .loginpage {
 
     color:#777777;
   }
-  .community-edition .offeredby p{
-    font-size:12px;
+  .offeredby p{
+    font-size:10px;
     color:#777777;
   }
 
@@ -669,7 +669,7 @@ button {
   text-shadow: 0 1px 2px rgba(black, .25);
   background: #4CAF50;
   border: 0;
-  border-bottom: 2px solid #d76b60;
+  // border-bottom: 2px solid #d76b60;
   border-radius: 5px;
   cursor: pointer;
   // @include box-shadow(inset 0 -2px #d76b60);
