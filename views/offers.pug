@@ -61,13 +61,14 @@ block content
 									.thumbnail
 										img(src="/img/blad.jpeg", alt='Lights', style='width:100%')
 									//- p.offeredby Offered by: #{key.user.userName}
-									p.offeredby In: #{plant.user.city}
-									| offered by #{plant.user.userName}
+									p(style='font-weight: bold').offeredby Aangeboden in: #{plant.user.city}
+									p(style='font-weight: bold') Aangeboden door: #{plant.user.userName}
+									p Omschrijving:
 									p
 										a(href="/grabplant/?id=" + plant.id)
 											| #{plant.description}	
 
-											button.form-button(onclick="location.href='/grabplant/?id=';" + plant.id) Ja die wil ik
+									button.form-button(onclick="location.href='/grabplant/?id=';" + plant.id) Ja, die wil ik!
 	//- #map
 
 	//- script.
