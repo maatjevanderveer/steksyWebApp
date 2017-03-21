@@ -23,9 +23,56 @@ app.use(session({
 app.use(express.static('static'));
 
 // ROUTES
+
+// LOGOUT
+app.get('/logout', function (request, response) {
+	if (request.session.user) {
+		request.session.destroy(function(){
+			response.redirect('/');
+		});
+	} else {
+		response.redirect("/login");
+	}
+});
+
+// ALL PLANTS
+app.get('/offers', (request, response) => {
+
+	user = request.session.user
+	if(user === undefined) {
+		response.redirect('/')
+	}
+	else {
+
+		
+		db.Plant.findAll(
+
+		{
+			include: [db.User]
+		}
+		).then((allPlants) => {
+			console.log("hier onder lezen")
+			console.log(allPlants)
+			console.log(allPlants[0].dataValues)
+			response.render('offers',
+			{
+				allPlants:allPlants,
+				name: request.session.user.userName
+			})
+		})
+	}
+})
+
+
 // HOME
 app.get('/', function (request, response){
-	response.render('index')
+	console.log('redirected to /');
+	console.log('request.session')
+	console.log(request.session)
+	response.render('index',
+	{
+		user: request.session.user
+	});
 })
 
 // LOG IN
@@ -61,16 +108,6 @@ app.post('/login', function(request, response){
 	}, function (error){
 		response.redirect('/?message'+ encodeURIComponent("Invalid email or password"));
 	});
-});
-
-// LOGOUT
-app.get('/logout', function (request, response) {
-	if (request.session.user) {
-		request.session.destroy();
-		response.redirect('/');
-	} else {
-		response.redirect("/login");
-	}
 });
 
 // SIGN UP
@@ -128,33 +165,6 @@ app.post('/newplant', bodyParser.urlencoded({extended: true}), function(request,
     // 
 })
 
-// ALL PLANTS
-app.get('/offers', (request, response) => {
-
-	user = request.session.user
-	if(user === undefined) {
-		response.redirect('/')
-	}
-	else {
-
-		
-		db.Plant.findAll(
-
-		{
-			include: [db.User]
-		}
-		).then((allPlants) => {
-			console.log("hier onder lezen")
-			console.log(allPlants)
-			console.log(allPlants[0].dataValues)
-			response.render('offers',
-			{
-				allPlants:allPlants,
-				name: request.session.user.userName
-			})
-		})
-	}
-})
 
 // VIEW A SPECIFIC PLANT
 app.get('/grabplant', (request, response) => {
