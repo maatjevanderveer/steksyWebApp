@@ -92,7 +92,8 @@ block content
 
 	script(type='text/javascript').
 		var addresses = JSON.parse("#{addresses}".replace(/&quot;/g, '\"'))
-		
+		//- console.log('addresses')
+		//- console.log(addresses)	
 
 
 		var geocoder;
@@ -112,35 +113,37 @@ block content
 			};
 		
 		map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-		
-		if (geocoder) {
-			geocoder.geocode( { 'address': address}, function(results, status) {
-				if (status == google.maps.GeocoderStatus.OK) {
-					if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
-						map.setCenter(results[0].geometry.location);
-						
-							var infowindow = new google.maps.InfoWindow({ 
-								content: '<b>'+address+'</b>',
-								size: new google.maps.Size(150,50)
-							});
-							
-							var marker = new google.maps.Marker({
-								position: results[0].geometry.location,
-								map: map,
-								title:address,
-								icon: '/img/miniplant.png'
-							});
-		
-							google.maps.event.addListener(marker, 'click', function() {
-								infowindow.open(map,marker);
-							});
+
+		for (var i=0; i < addresses.length; i++) {
+			if (geocoder) {
+				geocoder.geocode( { 'address': addresses[i]}, function(results, status) {
+					if (status == google.maps.GeocoderStatus.OK) {
+						if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
+							map.setCenter(results[0].geometry.location);
+								console.log(results)
+								var infowindow = new google.maps.InfoWindow({ 
+									content: '<b>'+results[0].formatted_address+'</b>',
+									size: new google.maps.Size(150,50)
+								});
+								
+								var marker = new google.maps.Marker({
+									position: results[0].geometry.location,
+									map: map,
+									title:address,
+									icon: '/img/miniplant.png'
+								});
+			
+								google.maps.event.addListener(marker, 'click', function() {
+									infowindow.open(map,marker);
+								});
+							} else {
+								alert("No results found");
+							}
 						} else {
-							alert("No results found");
+							alert("Geocode was not successful for the following reason: " + status);
 						}
-					} else {
-						alert("Geocode was not successful for the following reason: " + status);
-					}
-				});
+					});
+				}
 			}
 		}
 
