@@ -41,7 +41,7 @@ block content
 					p.category_item#Amsterdam Amsterdam
 					p.category_item#Rotterdam Rotterdam
 					p.category_item#Utrecht Utrecht
-					p.category_item#Almere Almere
+					
 
 				.block_container
 					//- img(src='/img/Amsterdam.jpg' class='plant_item amsterdam')
@@ -59,16 +59,18 @@ block content
 								.community-edition
 									h4 #{plant.plantName}
 									.thumbnail
-										img(src="/img/blad.jpeg", alt='Lights', style='width:100%')
+										//- img(src="/img/blad.jpeg", alt='Lights', style='width:100%')
 									//- p.offeredby Offered by: #{key.user.userName}
 									p(style='font-weight: bold').offeredby Aangeboden in: #{plant.user.city}
 									p(style='font-weight: bold') Aangeboden door: #{plant.user.userName}
 									p Omschrijving:
 									p
 										a(href="/grabplant/?id=" + plant.id)
-											| #{plant.description}	
+											//- | #{plant.description}	
 
-									button.form-button(onclick="location.href='/grabplant/?id=';" + plant.id) Ja, die wil ik!
+
+											button.form-button#meerinfo(onclick="location.href='/grabplant/?id=';" + plant.id) Meer info
+
 	//- #map
 
 	//- script.
@@ -147,6 +149,7 @@ block content
 
 
 	
+
 
 
 	//- .container.offers

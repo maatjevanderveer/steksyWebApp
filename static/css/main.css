@@ -99,11 +99,28 @@ form select {
 /* ENDING STYLING HOME SECTION */
 .testimonials {
   overflow: hidden;
-  min-height: 750px;
+  min-height: 600px;
   font-size: 48px;
   font-weight: 700; }
   .testimonials h1 {
     padding: 45px 0px 55px 0; }
+
+#wrapper {
+  width: 995px;
+  padding: 0px;
+  margin: 0px auto;
+  font-family: helvetica;
+  position: relative; }
+
+#wrapper .baricon {
+  display: inline-block;
+  border-radius: 100%;
+  padding: 12px;
+  background-color: #38610B;
+  color: white; }
+
+#user-details {
+  display: none; }
 
 /* ENDING STYLING TESTIMONIAL SECTION */
 /* BEGIN STYLING CAROUSEL */
@@ -244,7 +261,7 @@ form select {
 
 .category_item {
   float: left;
-  width: 20%;
+  width: 25%;
   padding: 20px 0;
   text-align: center;
   cursor: pointer;
@@ -299,7 +316,7 @@ section .loginpage {
 
 .community-edition {
   background: #fff;
-  padding: 40px 15px;
+  padding: 30px 30px 0px 30px;
   border: 1px solid #ececec;
   box-shadow: 2px 2px 5px 0 rgba(55, 50, 40, 0.2);
   -webkit-box-shadow: 2px 2px 5px 0 rgba(55, 50, 40, 0.2);
@@ -340,7 +357,7 @@ section .loginpage {
 .community-edition p {
   color: #777777; }
 
-.offeredby p {
+.offeredby {
   font-size: 10px;
   color: #777777; }
 
@@ -484,12 +501,19 @@ button {
 .is-showing {
   display: block; }
 
-.animate-out {
-  animation: out 600ms ease-in-out forwards; }
+#previous, #submitsignup {
+  width: 50%;
+  display: inline-block; }
 
-.animate-in {
-  animation: in 500ms ease-in-out forwards;
-  display: block; }
+#meerinfo {
+  font-size: 16px;
+  width: 75%;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 20px; }
+
+.thumbnail {
+  margin-bottom: 0px; }
 
 .container.grabplant p {
   color: #565656;
