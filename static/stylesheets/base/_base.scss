@@ -158,7 +158,7 @@ form select{
 
 .testimonials{
   overflow: hidden;
-  min-height: 750px;
+  min-height: 600px;
   font-size: 48px;
   font-weight: 700;
   
@@ -168,7 +168,76 @@ h1{
 }
 }
 
-
+#wrapper
+{
+  width:995px;
+  padding:0px;
+  margin:0px auto;
+  font-family:helvetica;
+  position:relative;
+}
+#wrapper .baricon
+{
+  display:inline-block;
+  border-radius:100%;
+  padding:12px;
+  background-color:#38610B;
+  color:white;
+}
+// #wrapper .progress_bar
+// {
+//   width:200px;
+//   height:5px;
+//   border-radius:20px;
+//   background-color:#D8D8D8;
+//   display:inline-block;
+// }
+// #wrapper form div
+// {
+//   margin-left:340px;
+//   padding:10px;
+//   box-sizing:border-box;
+//   width:300px;
+//   margin-top:50px;
+//   background-color:#585858;
+// }
+// #wrapper form div p
+// {
+//   color:#F2F2F2;
+//   margin:0px;
+//   margin-top:10px;
+//   font-weight:bold;
+// }
+// #wrapper form div .form_head
+// {
+//   font-size:22px;
+//   font-weight:bold;
+//   margin-bottom:30px;
+// }
+// #wrapper form div input[type="text"]
+// {
+//   width:200px;
+//   height:40px;
+//   padding:5px;
+//   border-radius:5px;
+//   border:none;
+//   margin-top:10px;
+// }
+// #wrapper form div input[type="button"],input[type="submit"]
+// {
+//   width:80px;
+//   height:40px;
+//   border-radius:5px;
+//   border:2px solid white;
+//   background:none;
+//   color:white;
+//   margin:5px;
+//   margin-top:10px;
+// }
+#user-details
+{
+  display:none;
+}
 
 
 /* ENDING STYLING TESTIMONIAL SECTION */
@@ -366,7 +435,7 @@ h1{
 
 .category_item{
   float: left;
-  width: 20%;
+  width: 25%;
   padding: 20px 0;
   text-align: center;
   cursor: pointer;
@@ -462,7 +531,7 @@ section .loginpage {
 
   .community-edition{
     background:#fff;
-    padding:40px 15px;
+    padding:30px 30px 0px 30px;
     border:1px solid #ececec;
     box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
     -webkit-box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
@@ -505,7 +574,7 @@ section .loginpage {
 
     color:#777777;
   }
-  .offeredby p{
+  .offeredby{
     font-size:10px;
     color:#777777;
   }
@@ -550,6 +619,7 @@ section .loginpage {
       background-color:#4CAF50;
     }
   }
+
 
 
 
@@ -724,19 +794,21 @@ button {
     display: block;
   }
 //   }
-    
-    
-.animate-out{
-  animation: out 600ms ease-in-out forwards;
-}
 
-.animate-in{
-  animation: in 500ms ease-in-out forwards;
-  display: block;
-  }
-.animate-up{
-  // transform: translateY(-500px) rotate(30deg)
+#previous, #submitsignup{
+  width: 50%;
+display: inline-block;
+}
+    
+#meerinfo{
+  font-size: 16px;
+  width: 75%;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
   
-    
-  
+
+.thumbnail{
+  margin-bottom: 0px;
+}
