@@ -32,7 +32,7 @@ const User = db.define('user', {
 		type: Sequelize.STRING,
 		allowNull:false,
 	},
-	adress: {
+	address: {
 		type: Sequelize.STRING,
 		allowNull:false,
 	},
@@ -78,7 +78,7 @@ db.sync({
 		email: "admin@mail.com",
 		password: "123",
 		name: "admin",
-		adress: "Prinsengracht",
+		address: "Prinsengracht",
 		houseNumber: "241",
 		zipcode: "1015DT",
 		city: "Amsterdam"
@@ -96,7 +96,7 @@ db.sync({
 			email: "kirsten@mail.com",
 			password: "123",
 			name: "kirsten",
-			adress: "Utrechtsestraat",
+			address: "Utrechtsestraat",
 			houseNumber: "241",
 			zipcode: "1015DT",
 			city: "Utrecht"
