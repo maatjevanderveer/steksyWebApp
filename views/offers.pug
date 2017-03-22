@@ -58,12 +58,13 @@ block content
 							div(class="col-md-3 col-sm-6 col-xs-12 plant_item " + plant.user.city)
 								.community-edition
 									h4 #{plant.plantName}
+									p(class="offeredin") #{plant.user.city}
+									
 									.thumbnail
-										//- img(src="/img/blad.jpeg", alt='Lights', style='width:100%')
-									//- p.offeredby Offered by: #{key.user.userName}
-									p(style='font-weight: bold').offeredby Aangeboden in: #{plant.user.city}
-									p(style='font-weight: bold') Aangeboden door: #{plant.user.userName}
-									p Omschrijving:
+										img(src="/img/plant.png", alt='Lights', style='width:100%')
+									
+									p(style=).offeredby Aangeboden door: #{plant.user.userName} 
+									
 									p
 										a(href="/grabplant/?id=" + plant.id)
 											//- | #{plant.description}	

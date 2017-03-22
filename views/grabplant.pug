@@ -2,20 +2,23 @@ extends ./partials.pug
 block content
 
 	section#business.portfolio.sections
-		.container.grabplant
+		.container.login-wrapper
+			.grabaplant
 				.head_title.text-center
 					h1 
 						span(style='color:#82ca9c;font-weight:bold')  #{onePlant.plantName}
 					p
-						strong Omschrijving: 
-						| #{onePlant.description}
-					p
 						strong Aangeboden door: 
 						| #{onePlant.user.userName}:
+					p
+						strong Omschrijving: 
+						| #{onePlant.description}
+					
 					p 
 						strong Aangeboden op: 
 						| #{onePlant.createdAt}
-					br
+						
+						button.form-button Ja die wil ik!
 						
 
 

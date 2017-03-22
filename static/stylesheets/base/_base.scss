@@ -441,10 +441,11 @@ h1{
   cursor: pointer;
   font-size: 15px;
   color: black;
+  font-family: 'Roboto', sans-serif;
 }
 
 .category_item:hover{
-  background-color: black;
+  background-color: #ffb655;
   color: white;
 
 }
@@ -477,7 +478,8 @@ h1{
 
 
 section .loginpage {
-  background:linear-gradient(to left, #76b852, #8DC26F);
+  background:url(../img/plantjes.jpg) no-repeat center center;
+  // background:linear-gradient(to left, #76b852, #8DC26F);
   padding: 0 0;
   
 }
@@ -499,9 +501,6 @@ section .loginpage {
   padding-bottom: 20px;
 }
 
-.community-edition p{
-  text-align: left;
-}
 
 
 
@@ -556,6 +555,8 @@ section .loginpage {
   .community-edition:hover p {
     color:#fff;
   }
+ 
+
 
   .community-edition i{
     font-size:60px;
@@ -569,16 +570,20 @@ section .loginpage {
     font-weight:600;
     letter-spacing:1px;
     margin-top:15px;
+    
   }
   .community-edition  p {
-
+    // font-weight: 10;
     color:#777777;
   }
   .offeredby{
-    font-size:10px;
+    font-size:12px;
     color:#777777;
+    text-align: center;
   }
-
+.offeredin{
+  text-align: center;
+}
 
 
   .portfolio-wrapper2{
@@ -804,11 +809,27 @@ display: inline-block;
   font-size: 16px;
   width: 75%;
   height: 30px;
-  margin-top: 10px;
-  margin-left: 20px;
+  margin: 10px 0px 30px 0px;
+  // margin-top: 10px;
+  // margin-left: 20px;
 }
   
 
 .thumbnail{
-  margin-bottom: 0px;
+  margin-bottom: 15px;
+  border-top: none;
+  // border-bottom: 2px solid #ccc;
+}
+
+.thumbnail >img {
+  max-width: 40%;
+
+}
+
+.grabaplant{
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  p{
+    color: black;
+  }
 }
