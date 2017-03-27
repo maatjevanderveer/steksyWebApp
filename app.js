@@ -54,10 +54,17 @@ app.get('/offers', (request, response) => {
 			console.log("hier onder lezen")
 			console.log(allPlants)
 			console.log(allPlants[0].dataValues)
+			const addresses = []
+			for (var i = 0; i < allPlants.length; i++) {
+				const address = allPlants[i].user.address + " " + allPlants[i].user.houseNumber + ", " + allPlants[i].user.city + ", The Netherlands"
+				addresses.push(address)
+			}
+
 			response.render('offers',
 			{
-				allPlants:allPlants,
-				name: request.session.user.userName
+				allPlants: allPlants,
+				name: request.session.user.userName,
+				addresses: JSON.stringify(addresses)
 			})
 		})
 	}
