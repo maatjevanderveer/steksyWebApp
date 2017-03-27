@@ -266,10 +266,11 @@ form select {
   text-align: center;
   cursor: pointer;
   font-size: 15px;
-  color: black; }
+  color: black;
+  font-family: 'Roboto', sans-serif; }
 
 .category_item:hover {
-  background-color: black;
+  background-color: #ffb655;
   color: white; }
 
 .plant_item {
@@ -284,7 +285,7 @@ form select {
   transition: all 0.4s ease-in-out; }
 
 section .loginpage {
-  background: linear-gradient(to left, #76b852, #8DC26F);
+  background: url(../img/plantjes.jpg) no-repeat center center;
   padding: 0 0; }
 
 .form-control {
@@ -300,9 +301,6 @@ section .loginpage {
   max-width: 55%;
   margin: 10px auto;
   padding-bottom: 20px; }
-
-.community-edition p {
-  text-align: left; }
 
 /*For portfolio Section*/
 .portfolio {
@@ -358,8 +356,12 @@ section .loginpage {
   color: #777777; }
 
 .offeredby {
-  font-size: 10px;
-  color: #777777; }
+  font-size: 12px;
+  color: #777777;
+  text-align: center; }
+
+.offeredin {
+  text-align: center; }
 
 .portfolio-wrapper2 {
   margin-top: 25px; }
@@ -509,11 +511,20 @@ button {
   font-size: 16px;
   width: 75%;
   height: 30px;
-  margin-top: 10px;
-  margin-left: 20px; }
+  margin: 10px 0px 30px 0px; }
 
 .thumbnail {
-  margin-bottom: 0px; }
+  margin-bottom: 15px;
+  border-top: none; }
+
+.thumbnail > img {
+  max-width: 40%; }
+
+.grabaplant {
+  border: 1px solid #ccc;
+  background: #f9f9f9; }
+  .grabaplant p {
+    color: black; }
 
 .container.grabplant p {
   color: #565656;
