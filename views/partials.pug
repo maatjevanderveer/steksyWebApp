@@ -4,27 +4,17 @@ html
 		meta(charset='utf-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
-		title Stecksy
+		title Steksie
 		link(rel='stylesheet', type='text/css', href='../css/bootstrap.css')
 		link(rel='stylesheet', type='text/css', href='../css/font_awesome/font-awesome.css')
 		link(rel='stylesheet', type='text/css', href='../css/main.css')
 		link(href='http://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext', rel='stylesheet', type='text/css')
-
-		script.
-			$(document).ready(function () {
-				$('#submit').click(function(event) {
-					if($('#email').val().trim().length === 0 || $('#password').val().trim().length === 0) {
-					event.preventDefault();
-					$('#error-message').html("Your username or password is empty.");
-					}
-					});
-					});
-		
+		link(rel='shortcut icon', type='image/x-icon', href='/img/favicon.ico')
 
 	body#page-top
 
 		if user
-			- console.log('user yolo')
+			- console.log('user')
 			- console.log(user)
 			.navbar.navbar-default.transparent
 				.container
@@ -73,21 +63,7 @@ html
 		
 		block content
 
-		//- if user
-		//-   a(href='/offers') Aanbod
-		//-   br
-		//-   a(href='/logout') Log uit
-		//- else
-		//-   form(action='/login' method='post')
-		//-     label email
-		//-     input#email(name='email' required)
-		//-     label password
-		//-     input#password(name='password' type='password' required)
-		//-     input(type='submit' value='login' id='submit')
-
-		//-     h2#error-message= message
-
-							
+						
 		footer.footer#footer.footer-menu.sections.footer-menu
 			.container
 				.row
@@ -112,3 +88,13 @@ html
 		script(src="/js/jquery-3.1.1.js")
 		script(src="/javascripts/bootstrap.js")
 		script(src="/js/custom.js")
+
+		script.
+			$(document).ready(function () {
+				$('#submit').click(function(event) {
+					if($('#email').val().trim().length === 0 || $('#password').val().trim().length === 0) {
+					event.preventDefault();
+					$('#error-message').html("Your username or password is empty.");
+					}
+					});
+					});

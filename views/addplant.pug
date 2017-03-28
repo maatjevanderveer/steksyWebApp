@@ -1,26 +1,14 @@
 extends ./partials.pug
 block content
-
-		.container
-			.login
-				form.register(action='/newplant', method='post')
-					
-					h2.form-title Voeg je stekje toe
-					input(type='text' placeholder='Wat voor stekje wil je delen?', name='newPlantName' required autofocus)
-					
-					textarea.input(type='text', placeholder='Schrijf een korte omschrijving hier', name='newDescription')
-					
-					button.form-button(type='submit') Post je stekje
+	section
+		.loginpage
+			.login-wrapper
+				.login
+					form.register(action='/newplant', method='post')
+						h2 Voeg je stekje toe
+						input.form-input(type='text' placeholder='Wat voor stekje wil je delen?', name='newPlantName' required autofocus)
+						
+						textarea.form-input(type='text', placeholder='Schrijf een korte omschrijving hier', name='newDescription')
+						
+						button.form-button(type='submit') Post je stekje
 				
-	
-		//- .section
-		//- 		.container
-		//- 				form(action='/newplant' method='post')
-		//- 					h2.form-title Voeg je stekje toe
-		//- 					label(for='title') Soort:
-		//- 					input(type='text', placeholder='Wat voor stekje wil je delen/verkopen', name='newPlantName')
-		//- 					br
-		//- 					label(for='body') Omschrijving:
-		//- 					textarea.input(type='text', placeholder='Schrijf een korte omschrijving hier', name='newDescription')
-		//- 					button.form-button(type='submit') Create your advertisement
-

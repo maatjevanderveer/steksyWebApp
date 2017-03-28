@@ -128,7 +128,7 @@ app.post('/signup', function(request, response){
 		userName: request.body.userName,
 		email: request.body.email,
 		password: request.body.password,
-		adress: request.body.adress,
+		address: request.body.address,
 		houseNumber: request.body.houseNumber,
 		zipcode: request.body.zipcode,
 		city: request.body.city
@@ -137,15 +137,6 @@ app.post('/signup', function(request, response){
 	})
 	console.log('ik werk')
 })
-
-
-// app.get('/offers', function (request, response){
-// 	response.render('offers')
-// })
-
-// app.get('/addplant', function (request, response){
-// 	response.render('signup')
-// })
 
 // ADD PLANT
 app.get('/addplant', function (request, response) {

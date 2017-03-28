@@ -1,57 +1,22 @@
 extends ./partials.pug
 block content
-	
-	//- .navbar.navbar-default.transparent
-	//- 	.container
-	//- 	.navbar-header
-	//- 		button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-	//- 			span.sr-only Toggle navigation
-	//- 			span.icon-bar
-	//- 			span.icon-bar
-	//- 			span.icon-bar
-	//- 		|
-	//- 		a.navbar-brand(href='/') Steksie
-	//- 			img(src='img/plant.png', alt='Logo')
-	//- 	#bs-example-navbar-collapse-1.collapse.navbar-collapse
-	//- 		ul.nav.navbar-nav.navbar-right
-	//- 			li.active
-	//- 				a(href='/') Home
-	//- 			li
-	//- 				a(href='/offers') Aanbod
-	//- 			li
-	//- 				a(href='/addplant') Voeg stekje toe
-	//- 			li
-	//- 				a(href='/login') Login
-	//- 			li
-	//- 				a(href='/signup') Sign up
 			 
-	section#business.portfolio.sections
+	section
 		.container.login-wrapper
 				.head_title.text-center
 					h1 Hallo
 						span(style='color:#82ca9c;font-weight:bold')  #{name}!
 					h4 Bekijk stekjes bij jou in de buurt:
-					section#business.portfolio.sections
+					section
 					
-	
-
 
 				.category_container
 					p.category_item#all All
 					p.category_item#Amsterdam Amsterdam
 					p.category_item#Rotterdam Rotterdam
 					p.category_item#Utrecht Utrecht
-					
-
-				.block_container
-					//- img(src='/img/Amsterdam.jpg' class='plant_item amsterdam')
-					//- img(src='/img/Rotterdam.jpg' class='plant_item rotterdam')
-					//- img(src='/img/Utrecht.jpg' class='plant_item utrecht')
-					//- img(src='/img/Utrecht.jpg' class='plant_item utrecht')
-
 	
-						
-	
+
 				.row
 					.portfolio-wrapper.text-center
 						each plant in allPlants
@@ -87,9 +52,9 @@ block content
 	//- 		});
 	//- 	}
 	
-	//- script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDoPPdYFyfxilJCSTebGPx6Pv0XU53Wzy0&callback=initMap', async defer)
+	//-script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDoPPdYFyfxilJCSTebGPx6Pv0XU53Wzy0&callback=initMap', async defer)
 
-	script(type='text/javascript', src='http://maps.google.com/maps/api/js?sensor=false')
+	script(type='text/javascript', src='http://maps.google.com/maps/api/js?key=AIzaSyDoPPdYFyfxilJCSTebGPx6Pv0XU53Wzy0')
 
 	script(type='text/javascript').
 		var addresses = JSON.parse("#{addresses}".replace(/&quot;/g, '\"'))
@@ -149,99 +114,7 @@ block content
 		}
 
 	body(style='margin:0px; padding:0px;', onload='initialize()')
-		#map_canvas(style='width:100%; height:75%')
-
-
-
-
-
-	
-
-
-
-	//- .container.offers
-
-	//- 	.row
-	//- 		.portfolio-wrapper.text-center
-	//- 			.col-md-3.col-sm-6.col-xs-12   
-	//- 				.community-edition
-	//- 					each key in allPlants
-	//- 							h4 #{key.plantName}
-	//- 					.thumbnail
-	//- 					a(href='#')
-	//- 					img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-	//- 					each key in allPlants
-	//- 						//- p.offeredby Offered by: #{key.user.userName}
-	//- 						//- p.offeredby In: #{key.user.city}
-	//- 							//- | offered by #{key.user.userName}
-					
-	//- 						p
-	//- 							a(href="/grabplant/?id=" + key.id)
-	//- 								| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-	//- 					each key in allPlants		
-	//- 						button.form-button(onclick="location.href='/grabplant/?id=';" + key.id) Ja die wil ik
-
-
-	//- 			.col-md-3.col-sm-6.col-xs-12
-	//- 				.community-edition
-	//- 					each key in allPlants
-	//- 							h4 #{key.plantName}
-	//- 					.thumbnail
-	//- 					a(href='#')
-	//- 					img(src='/img/blad.jpeg', alt='Lights', style='width:100%')
-	//- 					each key in allPlants
-	//- 						p.offeredby
-	//- 							| offered by #{key.userId}
-	//- 					p
-	//- 							| Description: Dit is mijn pannenkoekenplant. Mooie He? Wil jij die hebben?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	//- section
-	//- 	.container
-	//- 		ul.filters
-	//- 			li
-	//- 				input#filter-categorya(type='checkbox', value='categorya')
-	//- 				|  
-	//- 				label(for='filter-categorya') Category A
-	//- 			li
-	//- 				input#filter-categoryb(type='checkbox', value='categoryb')
-	//- 				|  
-	//- 				label(for='filter-categoryb') Category B
-			
-	//- 		.categorya.categoryb A, B
-	//- 		.categorya A
-	//- 		.categorya A
-	//- 		.categorya A
-	//- 		.categoryb B
-	//- 		.categoryb B
-	//- 		.categoryb B
-
-	//- //-IMPORT JS
-	//- script(src="/js/jquery-3.1.1.js")
-	//- script(src="/js/custom.js")
-	//- script.
-	//- 	$("#filters :checkbox").click(function() {
-	//- 		$("div").hide();
-	//- 		$("#filters :checkbox:checked").each(function() {
-	//- 			$("." + $(this).val()).show();
-	//- 		});
-	//- 	});
-	
-
-
+		#map_canvas(style='width:90%; height:75%; margin: 50px')
 			
 
 
