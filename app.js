@@ -128,12 +128,12 @@ app.post('/signup', function(request, response){
 		userName: request.body.userName,
 		email: request.body.email,
 		password: request.body.password,
-		adress: request.body.adress,
+		address: request.body.address,
 		houseNumber: request.body.houseNumber,
 		zipcode: request.body.zipcode,
 		city: request.body.city
 	}).then(function(){
-		response.redirect("/")
+		response.redirect("/login")
 	})
 	console.log('ik werk')
 })

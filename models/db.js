@@ -86,16 +86,16 @@ db.sync({
 	.then(function(user){
 		return user.createPlant ({
 			plantName: "pancakeplant",
-			description: "ik bied een stekje aan van mijn lieve pannekoekenplantje",
+			description: "ik bied een stekje aan van mijn lieve pannekoekenplantje. Niet eetbaar.",
 			userId: "user.userId"
 		})
 	})
 	.then(function(){
 		return User.create ({
-			userName: "Kirsten",
-			email: "kirsten@mail.com",
+			userName: "Petra",
+			email: "petra@mail.com",
 			password: "123",
-			name: "kirsten",
+			name: "Petra Plant",
 			address: "Utrechtsestraat",
 			houseNumber: "241",
 			zipcode: "1015DT",
@@ -111,14 +111,21 @@ db.sync({
 	})
 	.then(function(){
 		return User.create ({
-			userName: "Cinerama",
-			email: "cinerama@mail.com",
+			userName: "Karel",
+			email: "karel@mail.com",
 			password: "123",
-			name: "Cinerama",
-			address: "Westblaak",
+			name: "Karel Kool",
+			address: "Coolsingel",
 			houseNumber: "18",
-			zipcode: "3012KL",
+			zipcode: "3011AD",
 			city: "Rotterdam"
+		})
+	})
+	.then(function(user){
+		return user.createPlant ({
+			plantName: "Aloë Vera",
+			description: "Aloa, ik groei als kool",
+			userId: "user.userId"
 		})
 	})
 	.catch ( function (error){
