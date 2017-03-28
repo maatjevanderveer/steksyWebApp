@@ -30,28 +30,26 @@ block content
 			.login-wrapper
 				.login
 					#wrapper
-						
-									
-									form(action='/signup', method='post')
-										#account-details
-											//- p.form-head Account Details
-											input.form-input(type='text', name='userName' placeholder='Choose a username' autofocus)
-											input.form-input(type='text', name='email' placeholder='What is your email?')
-											input.form-input(type='password', name='password', placeholder='Choose your password?')
-											button.button.form-button-green.next-button(type='button', value='Next', onclick="show_next('account-details','user-details');") Next
-											p.message Already registered? 
-												a(href="/login") Log in 
+						form(action='/signup', method='post')
+							#account-details
+								//- p.form-head Account Details
+								input.form-input(type='text', name='userName' placeholder='Choose a username' autofocus)
+								input.form-input(type='text', name='email' placeholder='What is your email?')
+								input.form-input(type='password', name='password', placeholder='Choose your password?')
+								button.button.form-button-green.next-button(type='button', value='Next', onclick="show_next('account-details','user-details');") Next
+								p.message Already registered? 
+									a(href="/login") Log in 
 
-										#user-details
-											//- p.form-head User Details							
-											input.form-input(type='text', name='name' placeholder='What is your first and last name?' required autofocus)
-											input.form-input(type='text', name='adress' placeholder='In which street do you live?')
-											input.form-input(type='number', name='houseNumber' placeholder='What is your house number?')
-											input.form-input(type='text', name='zipcode' placeholder='What is your zipcode?')
-											input.form-input(type='text', name='city' placeholder='In which city do you live')
-												
-											button.form-button-green#previous(type='button', value='Previous', onclick="show_prev('account-details');") Previous
-											button.form-button-green#submitsignup(type='submit') Submit
+							#user-details
+								//- p.form-head User Details							
+								input.form-input(type='text', name='name' placeholder='What is your first and last name?' required autofocus)
+								input.form-input(type='text', name='adress' placeholder='In which street do you live?')
+								input.form-input(type='number', name='houseNumber' placeholder='What is your house number?')
+								input.form-input(type='text', name='zipcode' placeholder='What is your zipcode?')
+								input.form-input(type='text', name='city' placeholder='In which city do you live')
+									
+								button.form-button-green#previous(type='button', value='Previous', onclick="show_prev('account-details');") Previous
+								button.form-button-green#submitsignup(type='submit') Submit
 	//- .container
 	//- 	.login
 	//- 		form(action='/signup', method='post')

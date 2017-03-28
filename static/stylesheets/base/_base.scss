@@ -422,10 +422,6 @@ h1{
     }
 }
 
-
-
-
-
 .category_container{
   width: 800px;
   display:block;
@@ -472,19 +468,12 @@ h1{
   transition: all 0.4s ease-in-out;
 }
 
-
-
-
-
-
 section .loginpage {
   background:url(../img/plantjes.jpg) no-repeat center center;
   // background:linear-gradient(to left, #76b852, #8DC26F);
   padding: 0 0;
   
 }
-
-
 
 .form-control {
   border: 1px solid #DEDEDE;
@@ -500,11 +489,6 @@ section .loginpage {
   margin: 10px auto;
   padding-bottom: 20px;
 }
-
-
-
-
-
 
 @mixin linear-gradient($gradientLine, $colorStops...) {
   background-image: -webkit-linear-gradient($gradientLine, $colorStops);

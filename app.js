@@ -133,7 +133,7 @@ app.post('/signup', function(request, response){
 		zipcode: request.body.zipcode,
 		city: request.body.city
 	}).then(function(){
-		response.redirect("/login")
+		response.redirect("/")
 	})
 	console.log('ik werk')
 })

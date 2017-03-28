@@ -109,6 +109,18 @@ db.sync({
 			userId: "user.userId"
 		})
 	})
+	.then(function(){
+		return User.create ({
+			userName: "Cinerama",
+			email: "cinerama@mail.com",
+			password: "123",
+			name: "Cinerama",
+			address: "Westblaak",
+			houseNumber: "18",
+			zipcode: "3012KL",
+			city: "Rotterdam"
+		})
+	})
 	.catch ( function (error){
 		console.log(error)
 	})
