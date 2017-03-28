@@ -27,16 +27,15 @@ block content
 	section
 		.loginpage
 			.login-wrapper
-				
-					.login
-						form.register(action='/login', method='post')
-							
-							//- h2.form-title Please log in below
-							input.form-input(type='email', name='email' placeholder='What is your email?' value='admin@mail.com' required autofocus)
-							input.form-input(type='password', name='password', placeholder='What is your password?' value='123')
-							button.form-button-green(type='submit') Submit
-							p.message Not registered? 
-								a(href="/signup") Create an account
+				.login
+					form.register(action='/login', method='post')
+						
+						//- h2.form-title Please log in below
+						input.form-input(type='email', name='email' placeholder='What is your email?' value='admin@mail.com' required autofocus)
+						input.form-input(type='password', name='password', placeholder='What is your password?' value='123')
+						button.form-button-green(type='submit') Submit
+						p.message Not registered? 
+							a(href="/signup") Create an account
 					
 	//- footer.footer#footer.footer-menu.sections.footer-menu
 	//- 	.container
