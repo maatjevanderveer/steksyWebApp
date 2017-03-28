@@ -138,15 +138,6 @@ app.post('/signup', function(request, response){
 	console.log('ik werk')
 })
 
-
-// app.get('/offers', function (request, response){
-// 	response.render('offers')
-// })
-
-// app.get('/addplant', function (request, response){
-// 	response.render('signup')
-// })
-
 // ADD PLANT
 app.get('/addplant', function (request, response) {
 	user = request.session.user

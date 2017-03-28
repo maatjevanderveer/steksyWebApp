@@ -63,7 +63,7 @@ ul {
 /* END STYLING NAVBAR */
 /* BEGIN STYLING HOME SECTION */
 .home {
-  background: url(../img/bg_4_v4.jpg) no-repeat center center;
+  background: url(../img/bg_4_v3.jpg) no-repeat center center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -106,7 +106,7 @@ form select {
   font-size: 48px;
   font-weight: 700; }
   .testimonials h1 {
-    padding: 45px 0px 55px 0; }
+    padding: 45px 0px 0px 0; }
 
 #wrapper {
   width: 995px;
@@ -208,9 +208,7 @@ form select {
   margin-left: 10px; }
 
 /* ENDING STYLING QUOTES */
-/**
-  MEDIA QUERIES
-*/
+/* MEDIA QUERIES */
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   #quote-carousel {
@@ -232,9 +230,7 @@ form select {
     margin: 0px 5px;
     width: 20px;
     height: 20px; } }
-/**
-  MEDIA QUERIES
-*/
+/* MEDIA QUERIES */
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   #quote-carousel {

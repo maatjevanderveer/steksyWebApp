@@ -78,7 +78,7 @@ ul{
 
 /* BEGIN STYLING HOME SECTION */
 .home{
-  background:url(../img/bg_4_v4.jpg) no-repeat center center;
+  background:url(../img/bg_4_v3.jpg) no-repeat center center;
  
   background-size:cover;
   -webkit-background-size:cover;
@@ -136,7 +136,7 @@ form select{
   
 
 h1{
-  padding: 45px 0px 55px 0;
+  padding: 45px 0px 0px 0;
 }
 }
 
@@ -156,61 +156,11 @@ h1{
   background-color:#38610B;
   color:white;
 }
-// #wrapper .progress_bar
-// {
-//   width:200px;
-//   height:5px;
-//   border-radius:20px;
-//   background-color:#D8D8D8;
-//   display:inline-block;
-// }
-// #wrapper form div
-// {
-//   margin-left:340px;
-//   padding:10px;
-//   box-sizing:border-box;
-//   width:300px;
-//   margin-top:50px;
-//   background-color:#585858;
-// }
-// #wrapper form div p
-// {
-//   color:#F2F2F2;
-//   margin:0px;
-//   margin-top:10px;
-//   font-weight:bold;
-// }
-// #wrapper form div .form_head
-// {
-//   font-size:22px;
-//   font-weight:bold;
-//   margin-bottom:30px;
-// }
-// #wrapper form div input[type="text"]
-// {
-//   width:200px;
-//   height:40px;
-//   padding:5px;
-//   border-radius:5px;
-//   border:none;
-//   margin-top:10px;
-// }
-// #wrapper form div input[type="button"],input[type="submit"]
-// {
-//   width:80px;
-//   height:40px;
-//   border-radius:5px;
-//   border:2px solid white;
-//   background:none;
-//   color:white;
-//   margin:5px;
-//   margin-top:10px;
-// }
+
 #user-details
 {
   display:none;
 }
-
 
 /* ENDING STYLING TESTIMONIAL SECTION */
 
@@ -284,8 +234,6 @@ h1{
   font-weight: normal;
 }
 
-
-
 .testimonial-description{
   padding: 0 15px;
   font-size: 13px;
@@ -322,9 +270,7 @@ h1{
 
 /* ENDING STYLING QUOTES */
 
-/**
-  MEDIA QUERIES
-*/
+/* MEDIA QUERIES */
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
@@ -357,11 +303,7 @@ h1{
     }
 }
 
-
-
-/**
-  MEDIA QUERIES
-*/
+/* MEDIA QUERIES */
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
